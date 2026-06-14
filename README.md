@@ -1,9 +1,9 @@
-# Repository Template
+# create-test
 
-[![Continuous integration](https://github.com/stairwaytowonderland/repository-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/stairwaytowonderland/repository-template/actions/workflows/ci.yaml)
-[![GitHub latest release](https://img.shields.io/github/v/release/stairwaytowonderland/repository-template?include_prereleases&logo=rocket)](https://github.com/stairwaytowonderland/repository-template/releases)
-[![GitHub last commit](https://img.shields.io/github/last-commit/stairwaytowonderland/repository-template/main?logo=git)](https://github.com/stairwaytowonderland/repository-template/commits/main)
-[![GitHub license](https://img.shields.io/github/license/stairwaytowonderland/repository-template?logo=opensourceinitiative&labelCol&color=yellow&logoColor=white)](https://github.com/stairwaytowonderland/repository-template/tree/main/LICENSE)
+[![Continuous integration](https://github.com/stairwaytowonderland/create-test/actions/workflows/ci.yaml/badge.svg)](https://github.com/stairwaytowonderland/create-test/actions/workflows/ci.yaml)
+[![GitHub latest release](https://img.shields.io/github/v/release/stairwaytowonderland/create-test?include_prereleases&logo=rocket)](https://github.com/stairwaytowonderland/stairwaytowonderland/create-test/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/stairwaytowonderland/create-test?logo=git)](https://github.com/stairwaytowonderland/stairwaytowonderland/create-test/commits/main)
+[![GitHub license](https://img.shields.io/github/license/stairwaytowonderland/create-test?logo=opensourceinitiative&labelCol&color=yellow&logoColor=white)](https://github.com/stairwaytowonderland/stairwaytowonderland/create-test/tree/main/LICENSE)
 [![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-cc-FE5196?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?logo=pre-commit&logoColor=black)](https://github.com/pre-commit/pre-commit)
 
@@ -44,10 +44,10 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :flyi
 
 ## :white_check_mark: Good first tasks
 
-- [ ] **:one: Create your repo:** Use this template to create your own repo.
-- [ ] **:two: Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
+- [x] **:one: Create your repo:** Use this template to create your own repo.
+- [x] **:two: Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/create-test/actions/workflows/create-labels.yaml)
 _workflow_ to create some additional useful labels.
-- [ ] **:three: Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/repository-template/actions/workflows/import-csv-issues.yaml)
+- [x] **:three: Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/create-test/actions/workflows/import-csv-issues.yaml)
   _workflow_ to import first issues using the provided sample _TODO.csv_.
 - [ ] **:four: Customize your `README.md` _(this file)_:**
   Customize the `README.md` _file_ to include project-specific information and instructions.
@@ -89,7 +89,7 @@ git clone git@github.com:stairwaytowonderland/repository-template.git
 rm -rf .git
 
 # Overwrite README with your content
-echo "# Repository Template" > README.md
+echo "# create-test" > README.md
 
 # Initialize new git local repository
 git init
@@ -126,8 +126,8 @@ This template uses **`semantic-release`** with the _conventionalcommits_ preset 
 
 **The creation of tags and releases is handled _automatically_ by the pre-configured [_workflows_](./.github/workflows/).**
 
-_Default [`package.json`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
-and [`.releaserc`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)
+_Default [`package.json`](https://github.com/stairwaytowonderland/create-test/blob/main/templates/package.json)
+and [`.releaserc`](https://github.com/stairwaytowonderland/create-test/blob/main/templates/releaserc.json)
 files_ will be used instead of being included in this template, however those files can be copied into this project for
 additional customizations, such as [including a `CHANGELOG`](#page_with_curl-including-a-changelog).
 
@@ -139,7 +139,7 @@ additional customizations, such as [including a `CHANGELOG`](#page_with_curl-inc
 
 To have the generated `CHANGELOG` automatically committed:
 
-1. Copy the _default [.releaserc](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)_
+1. Copy the _default [.releaserc](https://github.com/stairwaytowonderland/create-test/blob/main/templates/releaserc.json)_
 file into your project.
 2. Add the `@semantic-release/git` _plugin_ configuration **to the end of the _plugins_ section** in your [`.releaserc`](./.releaserc):
 
@@ -239,5 +239,5 @@ files.
 
 > [!NOTE]
 >
-> See [Contributing Guidelines](https://github.com/stairwaytowonderland/repository-template?tab=contributing-ov-file#contributing-guidelines)
+> See [Contributing Guidelines](https://github.com/stairwaytowonderland/create-test?tab=contributing-ov-file#contributing-guidelines)
 > for more information.
