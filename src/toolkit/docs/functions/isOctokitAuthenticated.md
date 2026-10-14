@@ -1,14 +1,14 @@
-[**typescript-action-template**](../README.md)
+[**create-test**](../README.md)
 
 ***
 
-[typescript-action-template](../README.md) / isOctokitAuthenticated
+[create-test](../README.md) / isOctokitAuthenticated
 
 # Function: isOctokitAuthenticated()
 
 > **isOctokitAuthenticated**(`octokit`, `action`, `failOnError?`): `Promise`\<`boolean`\>
 
-Defined in: [src/toolkit/api.ts:28](https://github.com/stairwaytowonderland/typescript-action-template/blob/7be33a45f0ece47e1c1086b15ca1c33944f860c4/src/toolkit/api.ts#L28)
+Defined in: [src/toolkit/api.ts:28](https://github.com/stairwaytowonderland/create-test/blob/c1679f89e1cbbe5ee37cf6458e1b3966de8b32a9/src/toolkit/api.ts#L28)
 
 Checks if the provided Octokit client is authenticated for the given repository action.
 

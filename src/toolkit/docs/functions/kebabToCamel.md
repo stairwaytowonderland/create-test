@@ -1,14 +1,14 @@
-[**typescript-action-template**](../README.md)
+[**create-test**](../README.md)
 
 ***
 
-[typescript-action-template](../README.md) / kebabToCamel
+[create-test](../README.md) / kebabToCamel
 
 # Function: kebabToCamel()
 
 > **kebabToCamel**(`str`): `string`
 
-Defined in: [src/toolkit/utils.ts:29](https://github.com/stairwaytowonderland/typescript-action-template/blob/7be33a45f0ece47e1c1086b15ca1c33944f860c4/src/toolkit/utils.ts#L29)
+Defined in: [src/toolkit/utils.ts:29](https://github.com/stairwaytowonderland/create-test/blob/c1679f89e1cbbe5ee37cf6458e1b3966de8b32a9/src/toolkit/utils.ts#L29)
 
 Converts a kebab-case string to camelCase.
 

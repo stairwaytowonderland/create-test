@@ -1,8 +1,8 @@
-[**typescript-action-template**](../../../README.md)
+[**create-test**](../../../README.md)
 
 ***
 
-[typescript-action-template](../../../README.md) / [toolkit/utils](../README.md) / kebabToCamel
+[create-test](../../../README.md) / [toolkit/utils](../README.md) / kebabToCamel
 
 # Function: kebabToCamel()
 

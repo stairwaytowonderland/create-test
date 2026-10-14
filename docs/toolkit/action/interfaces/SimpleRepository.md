@@ -1,8 +1,8 @@
-[**typescript-action-template**](../../../README.md)
+[**create-test**](../../../README.md)
 
 ***
 
-[typescript-action-template](../../../README.md) / [toolkit/action](../README.md) / SimpleRepository
+[create-test](../../../README.md) / [toolkit/action](../README.md) / SimpleRepository
 
 # Interface: SimpleRepository
 

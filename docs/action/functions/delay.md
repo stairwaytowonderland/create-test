@@ -1,8 +1,8 @@
-[**typescript-action-template**](../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[typescript-action-template](../../README.md) / [action](../README.md) / delay
+[create-test](../../README.md) / [action](../README.md) / delay
 
 # Function: delay()
 

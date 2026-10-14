@@ -1,8 +1,8 @@
-[**typescript-action-template**](../README.md)
+[**create-test**](../README.md)
 
 ***
 
-[typescript-action-template](../README.md) / main
+[create-test](../README.md) / main
 
 # main
 

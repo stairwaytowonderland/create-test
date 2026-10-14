@@ -1,14 +1,14 @@
-[**typescript-action-template**](../README.md)
+[**create-test**](../README.md)
 
 ***
 
-[typescript-action-template](../README.md) / getSafeInputs
+[create-test](../README.md) / getSafeInputs
 
 # Function: getSafeInputs()
 
 > **getSafeInputs**\<`K`\>(`inputs?`, ...`keys`): `Omit`\<[`ActionInputs`](../type-aliases/ActionInputs.md), `K`\>
 
-Defined in: [src/toolkit/action.ts:68](https://github.com/stairwaytowonderland/typescript-action-template/blob/7be33a45f0ece47e1c1086b15ca1c33944f860c4/src/toolkit/action.ts#L68)
+Defined in: [src/toolkit/action.ts:68](https://github.com/stairwaytowonderland/create-test/blob/c1679f89e1cbbe5ee37cf6458e1b3966de8b32a9/src/toolkit/action.ts#L68)
 
 Filters out specified keys from the action inputs object.
 

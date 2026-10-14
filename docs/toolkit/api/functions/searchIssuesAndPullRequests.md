@@ -1,8 +1,8 @@
-[**typescript-action-template**](../../../README.md)
+[**create-test**](../../../README.md)
 
 ***
 
-[typescript-action-template](../../../README.md) / [toolkit/api](../README.md) / searchIssuesAndPullRequests
+[create-test](../../../README.md) / [toolkit/api](../README.md) / searchIssuesAndPullRequests
 
 # Function: searchIssuesAndPullRequests()
 

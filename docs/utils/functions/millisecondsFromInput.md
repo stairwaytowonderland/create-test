@@ -1,8 +1,8 @@
-[**typescript-action-template**](../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[typescript-action-template](../../README.md) / [utils](../README.md) / millisecondsFromInput
+[create-test](../../README.md) / [utils](../README.md) / millisecondsFromInput
 
 # Function: millisecondsFromInput()
 

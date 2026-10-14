@@ -1,8 +1,8 @@
-[**typescript-action-template**](../README.md)
+[**create-test**](../README.md)
 
 ***
 
-[typescript-action-template](../README.md) / GitHubContext
+[create-test](../README.md) / GitHubContext
 
 # Interface: GitHubContext
 

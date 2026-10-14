@@ -1,8 +1,8 @@
-[**typescript-action-template**](../../../README.md)
+[**create-test**](../../../README.md)
 
 ***
 
-[typescript-action-template](../../../README.md) / [toolkit/api](../README.md) / isOctokitAuthenticated
+[create-test](../../../README.md) / [toolkit/api](../README.md) / isOctokitAuthenticated
 
 # Function: isOctokitAuthenticated()
 

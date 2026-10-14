@@ -1,8 +1,8 @@
-[**typescript-action-template**](../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[typescript-action-template](../../README.md) / [main](../README.md) / run
+[create-test](../../README.md) / [main](../README.md) / run
 
 # Function: run()
 
