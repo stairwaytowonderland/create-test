@@ -1,0 +1,10 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"logLevel": "Verbose",
+	"readme": "none",
+	"disableSources": true,
+	"entryPointStrategy": "expand",
+	"entryPoints": ["src"],
+	"out": "./docs",
+	"exclude": ["**/__tests__/**", "**/__fixtures__/**", "**/__utils__/**", "**/docs/**", "**/*.test.ts", "**/index.ts"]
+}
