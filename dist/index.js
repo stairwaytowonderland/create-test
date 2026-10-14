@@ -1,5 +1,5 @@
 /**
- * Copyright 2026
+ * Copyright 2026 stairwaytowonderland
  */
 
 import * as os from 'os';

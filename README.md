@@ -4,7 +4,7 @@
 ![Linter](https://github.com/stairwaytowonderland/create-test/actions/workflows/linter.yaml/badge.svg)
 ![CodeQL](https://github.com/stairwaytowonderland/create-test/actions/workflows/codeql-analysis.yml/badge.svg)
 ![Coverage](./badges/coverage.svg)
-[![Documented](./badges/combined-documentation.svg)](./docs)
+[![Documented](./badges/documentation.svg)](./docs)
 
 [![GitHub latest release](https://img.shields.io/github/v/release/stairwaytowonderland/create-test?include_prereleases&logo=rocket)](https://github.com/stairwaytowonderland/create-test/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/stairwaytowonderland/create-test?logo=git)](https://github.com/stairwaytowonderland/create-test/commits/main)
