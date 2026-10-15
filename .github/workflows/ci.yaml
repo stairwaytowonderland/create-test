@@ -68,6 +68,8 @@ jobs:
         run: |
           echo "${{ toJson(steps.has-paths.outputs) }}"
           echo "Changed files: ${{ steps.has-paths.outputs.changed-files }}"
+          echo "Filtered files: ${{ steps.has-paths.outputs.changed-files-filtered }}"
+          echo "Trigger update: ${{ steps.has-paths.outputs.trigger-update }}"
 
   # package-update:
   #   name: 🔂 Update packages
