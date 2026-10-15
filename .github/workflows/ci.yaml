@@ -66,7 +66,7 @@ jobs:
 
       - name: Show outputs
         run: |
-          echo "${{ join(steps.has-paths.outputs, '\n') }}"
+          echo "${{ toJson(steps.has-paths.outputs) }}"
           echo "Changed files: ${{ steps.has-paths.outputs.changed-files }}"
 
   # package-update:

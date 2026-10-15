@@ -34,4 +34,4 @@ jobs:
         uses: actions/checkout@v3
       - name: Show outputs
         run: |
-          echo "${{ join(needs.package-update.outputs, '\n') }}"
+          echo "${{ toJson(needs.package-update.outputs) }}"
