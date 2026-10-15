@@ -37,37 +37,37 @@ permissions:
 # 'Fine-grained token' repo permissions: Contents
 
 jobs:
-  setup:
-    name: 🛠️ Setup
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-          persist-credentials: false
-          sparse-checkout: |
-            package.json
-            package-lock.json
+  # setup:
+  #   name: 🛠️ Setup
+  #   if: github.event_name == 'push'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 2
+  #         persist-credentials: false
+  #         sparse-checkout: |
+  #           package.json
+  #           package-lock.json
 
-      - name: Check for changed files
-        id: has-paths
-        # uses: ./.actions/.github/actions/changed-files-action
-        uses: stairwaytowonderland/actions/.github/actions/changed-files-action@v1
-        with:
-          paths: |
-            package.json
-            package-lock.json
-          ignore-authors: |
-            github-actions[bot]
-            semantic-release-bot
-          ignore-events: push
+  #     - name: Check for changed files
+  #       id: has-paths
+  #       # uses: ./.actions/.github/actions/changed-files-action
+  #       uses: stairwaytowonderland/actions/.github/actions/changed-files-action@v1
+  #       with:
+  #         paths: |
+  #           package.json
+  #           package-lock.json
+  #         ignore-authors: |
+  #           github-actions[bot]
+  #           semantic-release-bot
+  #         ignore-events: push
 
-      - name: Show outputs
-        run: |
-          echo "${{ join(steps.has-paths.outputs.changed-files, '\n') }}"
-          echo "Changed files: ${{ steps.has-paths.outputs.changed-files }}"
+  #     - name: Show outputs
+  #       run: |
+  #         echo "${{ join(steps.has-paths.outputs.changed-files, '\n') }}"
+  #         echo "Changed files: ${{ steps.has-paths.outputs.changed-files }}"
 
   # package-update:
   #   name: 🔂 Update packages
