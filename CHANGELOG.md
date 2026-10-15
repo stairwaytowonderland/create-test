@@ -1,3 +1,9 @@
+## [1.13.0](https://github.com/stairwaytowonderland/create-test/compare/v1.12.0...v1.13.0) (2026-10-15)
+
+### ✨ Features
+
+* update ([06d8242](https://github.com/stairwaytowonderland/create-test/commit/06d82421899a584678a6f1243a03148a34bae484))
+
 ## [1.12.0](https://github.com/stairwaytowonderland/create-test/compare/v1.11.0...v1.12.0) (2026-10-15)
 
 ### ✨ Features
