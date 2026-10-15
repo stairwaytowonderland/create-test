@@ -62,6 +62,7 @@ jobs:
           ignore-authors: |
             github-actions[bot]
             semantic-release-bot
+
           # ignore-events: push
 
       - name: Show outputs
