@@ -10,6 +10,7 @@ on:
   # To use pull_request, set the secrets to the organization 'Dependabot secrets' settings.
   pull_request_target:
     types: [opened, reopened, synchronize]
+    branches: [main]
   workflow_dispatch:
     inputs:
       dry-run:
