@@ -62,7 +62,7 @@ jobs:
           ignore-authors: |
             github-actions[bot]
             semantic-release-bot
-          # ignore-events: push
+          ignore-events: push
 
       - name: Show outputs
         run: |
@@ -75,60 +75,60 @@ jobs:
   #   uses: stairwaytowonderland/.github/.github/workflows/ci-package-update.yaml@v1
   #   secrets: inherit
 
-  # info:
-  #   name: 🪏 Gather Info
-  #   needs: [package-update]
-  #   if: github.event_name == 'push' && needs.package-update.outputs.will-update != 'true' || always()
-  #   uses: stairwaytowonderland/.github/.github/workflows/ci-meta.yaml@v1
-  #   with:
-  #     publish: ${{ (github.event_name == 'workflow_dispatch' && (inputs.tag != '' && inputs.notes-b64 != '')) || startsWith(github.ref, 'refs/tags/') }}
+  info:
+    name: 🪏 Gather Info
+    # needs: [package-update]
+    # if: github.event_name == 'push' && needs.package-update.outputs.will-update != 'true' || always()
+    uses: stairwaytowonderland/.github/.github/workflows/ci-meta.yaml@v1
+    with:
+      publish: ${{ (github.event_name == 'workflow_dispatch' && (inputs.tag != '' && inputs.notes-b64 != '')) || startsWith(github.ref, 'refs/tags/') }}
 
-  # test:
-  #   name: 🔔 Run Action Tests
-  #   needs: [info]
-  #   if: needs.info.outputs.is-release-workflow == 'true'
-  #   uses: ./.github/workflows/test.yaml
-  #   permissions:
-  #     contents: read
-  #     actions: read
-  #   secrets: inherit
+  test:
+    name: 🔔 Run Action Tests
+    needs: [info]
+    if: needs.info.outputs.is-release-workflow == 'true'
+    uses: ./.github/workflows/test.yaml
+    permissions:
+      contents: read
+      actions: read
+    secrets: inherit
 
-  # check-dist:
-  #   name: 🏗️ Check Transpiled JavaScript
-  #   needs: [info]
-  #   if: needs.info.outputs.is-release-workflow == 'true'
-  #   uses: ./.github/workflows/check-dist.yaml
-  #   permissions:
-  #     contents: read
+  check-dist:
+    name: 🏗️ Check Transpiled JavaScript
+    needs: [info]
+    if: needs.info.outputs.is-release-workflow == 'true'
+    uses: ./.github/workflows/check-dist.yaml
+    permissions:
+      contents: read
 
-  # release:
-  #   name: 🚀 Release a New Version
-  #   needs: [info, test, check-dist]
-  #   uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
-  #   with:
-  #     dispatch-workflow: ${{ needs.info.outputs.has-release-tags != 'true' && 'ci.yaml' || '' }}
-  #   secrets: inherit
+  release:
+    name: 🚀 Release a New Version
+    needs: [info, test, check-dist]
+    uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
+    with:
+      dispatch-workflow: ${{ needs.info.outputs.has-release-tags != 'true' && 'ci.yaml' || '' }}
+    secrets: inherit
 
-  # publish:
-  #   name: 📦 Publish Release
-  #   needs: [info]
-  #   if: needs.info.outputs.is-publish-workflow == 'true' && ! github.event.repository.is_template
-  #   uses: stairwaytowonderland/.github/.github/workflows/publish.yaml@v1
-  #   permissions:
-  #     contents: write
-  #   with:
-  #     tag: ${{ inputs.tag }}
-  #     notes-b64: ${{ inputs.notes-b64 }}
-  #     normalize-majorver: true
-  #   secrets: inherit
+  publish:
+    name: 📦 Publish Release
+    needs: [info]
+    if: needs.info.outputs.is-publish-workflow == 'true' && ! github.event.repository.is_template
+    uses: stairwaytowonderland/.github/.github/workflows/publish.yaml@v1
+    permissions:
+      contents: write
+    with:
+      tag: ${{ inputs.tag }}
+      notes-b64: ${{ inputs.notes-b64 }}
+      normalize-majorver: true
+    secrets: inherit
 
-  # release-and-publish:
-  #   name: Release and Publish
-  #   uses: stairwaytowonderland/.github/.github/workflows/ci.yaml@v1
-  #   secrets: inherit
-  #   with:
-  #     first-release-dispatch-workflow: ci.yaml
-  #     normalize-majorver: true
-  #     # The following inputs are required in the workflow specified by first-release-dispatch-workflow (e.g. the ci.yaml in this case):
-  #     tag: ${{ inputs.tag }}
-  #     notes-b64: ${{ inputs.notes-b64 }}
+  release-and-publish:
+    name: Release and Publish
+    uses: stairwaytowonderland/.github/.github/workflows/ci.yaml@v1
+    secrets: inherit
+    with:
+      first-release-dispatch-workflow: ci.yaml
+      normalize-majorver: true
+      # The following inputs are required in the workflow specified by first-release-dispatch-workflow (e.g. the ci.yaml in this case):
+      tag: ${{ inputs.tag }}
+      notes-b64: ${{ inputs.notes-b64 }}
