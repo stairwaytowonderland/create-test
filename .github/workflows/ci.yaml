@@ -122,13 +122,13 @@ jobs:
       normalize-majorver: true
     secrets: inherit
 
-  release-and-publish:
-    name: Release and Publish
-    uses: stairwaytowonderland/.github/.github/workflows/ci.yaml@v1
-    secrets: inherit
-    with:
-      first-release-dispatch-workflow: ci.yaml
-      normalize-majorver: true
-      # The following inputs are required in the workflow specified by first-release-dispatch-workflow (e.g. the ci.yaml in this case):
-      tag: ${{ inputs.tag }}
-      notes-b64: ${{ inputs.notes-b64 }}
+  # release-and-publish:
+  #   name: Release and Publish
+  #   uses: stairwaytowonderland/.github/.github/workflows/ci.yaml@v1
+  #   secrets: inherit
+  #   with:
+  #     first-release-dispatch-workflow: ci.yaml
+  #     normalize-majorver: true
+  #     # The following inputs are required in the workflow specified by first-release-dispatch-workflow (e.g. the ci.yaml in this case):
+  #     tag: ${{ inputs.tag }}
+  #     notes-b64: ${{ inputs.notes-b64 }}
