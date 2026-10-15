@@ -37,58 +37,89 @@ permissions:
 # 'Fine-grained token' repo permissions: Contents
 
 jobs:
-  package-update:
-    name: 🔂 Update packages
+  setup:
+    name: 🛠️ Setup
     if: github.event_name == 'push'
-    uses: stairwaytowonderland/.github/.github/workflows/ci-package-update.yaml@v1
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+          sparse-checkout: |
+            package.json
+            package-lock.json
 
-  info:
-    name: 🪏 Gather Info
-    needs: [package-update]
-    if: github.event_name == 'push' && needs.package-update.outputs.will-update != 'true' || always()
-    uses: stairwaytowonderland/.github/.github/workflows/ci-meta.yaml@v1
-    with:
-      publish: ${{ (github.event_name == 'workflow_dispatch' && (inputs.tag != '' && inputs.notes-b64 != '')) || startsWith(github.ref, 'refs/tags/') }}
+      - name: Check for changed files
+        id: has-paths
+        # uses: ./.actions/.github/actions/changed-files-action
+        uses: stairwaytowonderland/actions/.github/actions/changed-files-action@v1
+        with:
+          paths: |
+            package.json
+            package-lock.json
+          ignore-authors: |
+            github-actions[bot]
+            semantic-release-bot
+          ignore-events: push
 
-  test:
-    name: 🔔 Run Action Tests
-    needs: [info]
-    if: needs.info.outputs.is-release-workflow == 'true'
-    uses: ./.github/workflows/test.yaml
-    permissions:
-      contents: read
-      actions: read
-    secrets: inherit
+      - name: Show outputs
+        run: |
+          echo "Outputs (json format): ${{ toJson(steps.has-paths.outputs) }}"
 
-  check-dist:
-    name: 🏗️ Check Transpiled JavaScript
-    needs: [info]
-    if: needs.info.outputs.is-release-workflow == 'true'
-    uses: ./.github/workflows/check-dist.yaml
-    permissions:
-      contents: read
+  # package-update:
+  #   name: 🔂 Update packages
+  #   if: github.event_name == 'push'
+  #   uses: stairwaytowonderland/.github/.github/workflows/ci-package-update.yaml@v1
+  #   secrets: inherit
 
-  release:
-    name: 🚀 Release a New Version
-    needs: [info, test, check-dist]
-    uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
-    with:
-      dispatch-workflow: ${{ needs.info.outputs.has-release-tags != 'true' && 'ci.yaml' || '' }}
-    secrets: inherit
+  # info:
+  #   name: 🪏 Gather Info
+  #   needs: [package-update]
+  #   if: github.event_name == 'push' && needs.package-update.outputs.will-update != 'true' || always()
+  #   uses: stairwaytowonderland/.github/.github/workflows/ci-meta.yaml@v1
+  #   with:
+  #     publish: ${{ (github.event_name == 'workflow_dispatch' && (inputs.tag != '' && inputs.notes-b64 != '')) || startsWith(github.ref, 'refs/tags/') }}
 
-  publish:
-    name: 📦 Publish Release
-    needs: [info]
-    if: needs.info.outputs.is-publish-workflow == 'true' && ! github.event.repository.is_template
-    uses: stairwaytowonderland/.github/.github/workflows/publish.yaml@v1
-    permissions:
-      contents: write
-    with:
-      tag: ${{ inputs.tag }}
-      notes-b64: ${{ inputs.notes-b64 }}
-      normalize-majorver: true
-    secrets: inherit
+  # test:
+  #   name: 🔔 Run Action Tests
+  #   needs: [info]
+  #   if: needs.info.outputs.is-release-workflow == 'true'
+  #   uses: ./.github/workflows/test.yaml
+  #   permissions:
+  #     contents: read
+  #     actions: read
+  #   secrets: inherit
+
+  # check-dist:
+  #   name: 🏗️ Check Transpiled JavaScript
+  #   needs: [info]
+  #   if: needs.info.outputs.is-release-workflow == 'true'
+  #   uses: ./.github/workflows/check-dist.yaml
+  #   permissions:
+  #     contents: read
+
+  # release:
+  #   name: 🚀 Release a New Version
+  #   needs: [info, test, check-dist]
+  #   uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
+  #   with:
+  #     dispatch-workflow: ${{ needs.info.outputs.has-release-tags != 'true' && 'ci.yaml' || '' }}
+  #   secrets: inherit
+
+  # publish:
+  #   name: 📦 Publish Release
+  #   needs: [info]
+  #   if: needs.info.outputs.is-publish-workflow == 'true' && ! github.event.repository.is_template
+  #   uses: stairwaytowonderland/.github/.github/workflows/publish.yaml@v1
+  #   permissions:
+  #     contents: write
+  #   with:
+  #     tag: ${{ inputs.tag }}
+  #     notes-b64: ${{ inputs.notes-b64 }}
+  #     normalize-majorver: true
+  #   secrets: inherit
 
   # release-and-publish:
   #   name: Release and Publish
