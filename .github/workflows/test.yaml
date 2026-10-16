@@ -59,7 +59,8 @@ jobs:
           paths: |
             .github/**
             src/**
-            package*.json
+            package.json
+            package-lock.json
             action.yaml
           # ignore-authors: |
           #   github-actions[bot]
