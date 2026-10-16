@@ -58,10 +58,6 @@ jobs:
         with:
           paths: |
             .github/**
-            src/**
-            package.json
-            package-lock.json
-            action.yaml
           # ignore-authors: |
           #   github-actions[bot]
           #   semantic-release-bot
