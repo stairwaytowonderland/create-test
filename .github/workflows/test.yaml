@@ -57,11 +57,11 @@ jobs:
         uses: stairwaytowonderland/actions/.github/actions/changed-files-action@v1
         with:
           paths: |
-            '.github/**'
-            'src/**'
-            'package.json'
-            'package-lock.json'
-            'action.yaml'
+            .github/**
+            src/**
+            package.json
+            package-lock.json
+            action.yaml
           # ignore-authors: |
           #   github-actions[bot]
           #   semantic-release-bot
