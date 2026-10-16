@@ -24,7 +24,7 @@ on:
         default: '' # checkov:skip=CKV_GHA_7: Release notes required for automated dispatch, which is used for the first tag/release
 
 concurrency:
-  group: '${{ github.repository_id }}-${{ github.ref_name }}'
+  group: ${{ github.event_name == 'push' && format('{0}-{1}', github.repository_id, github.ref_name || github.run_id) }}
   cancel-in-progress: ${{ github.event_name == 'push' }}
 
 permissions:
