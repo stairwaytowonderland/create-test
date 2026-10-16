@@ -1,7 +1,7 @@
 {
 	"name": "create-test",
 	"description": "GitHub Actions Create Test",
-	"version": "1.27.0",
+	"version": "1.28.0",
 	"author": "",
 	"type": "module",
 	"private": true,
