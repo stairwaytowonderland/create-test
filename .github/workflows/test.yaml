@@ -54,7 +54,7 @@ jobs:
   basic-validation:
     name: Basic Validation
     needs: check-changed
-    if: needs.check-changed.outputs.trigger-update == 'true'
+    if: needs.check-changed.outputs.result == 'true'
     uses: actions/reusable-workflows/.github/workflows/basic-validation.yml@main
     permissions:
       contents: read
@@ -65,7 +65,7 @@ jobs:
   test-action:
     name: GitHub Actions Test
     needs: check-changed
-    if: needs.check-changed.outputs.trigger-update == 'true'
+    if: needs.check-changed.outputs.result == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
