@@ -61,9 +61,9 @@ jobs:
             src/**
             package*.json
             action.yaml
-          # ignore-authors: |
-          #   github-actions[bot]
-          #   semantic-release-bot
+          ignore-authors: |
+            github-actions[bot]
+            semantic-release-bot
 
       - name: Show outputs
         env:
