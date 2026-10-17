@@ -31,8 +31,8 @@ on:
         default: 2000
 
 permissions:
-  contents: read # access to read repository's content
-  actions: read # access to reading actions
+  contents: read
+  actions: read
 
 jobs:
   setup:
