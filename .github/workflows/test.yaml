@@ -67,7 +67,6 @@ jobs:
     needs: check-changed
     if: needs.check-changed.outputs.trigger-update == 'true'
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         id: checkout
