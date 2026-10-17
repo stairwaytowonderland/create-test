@@ -4,6 +4,31 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - '.github/**'
+      - 'src/**'
+      - 'package*json'
+      - 'action.yaml'
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     # - '.github/**'
+  #     - 'src/**'
+  #     - 'package*json'
+  #     - 'action.yaml'
+  workflow_call:
+    inputs:
+      milliseconds:
+        description: 'Milliseconds to wait'
+        type: number
+        default: 2000
+  workflow_dispatch:
+    inputs:
+      milliseconds:
+        description: 'Milliseconds to wait'
+        type: number
+        default: 2000
 
 permissions:
   contents: read
@@ -12,8 +37,7 @@ permissions:
 jobs:
   check-changed:
     name: Check Changed Files
-    if: always()
-    # if: github.event_name == 'push' && ! startsWith(github.ref, 'refs/tags/')
+    if: github.event_name == 'pull_request' || (github.event_name == 'push' && ! startsWith(github.ref, 'refs/tags/'))
     permissions:
       contents: read
     uses: stairwaytowonderland/.github/.github/workflows/check-changed.yaml@v1
@@ -53,7 +77,7 @@ jobs:
         id: test-action
         uses: ./
         with:
-          milliseconds: 2000
+          milliseconds: ${{ inputs.milliseconds }}
 
       - name: Print Output
         id: output
