@@ -1,3 +1,14 @@
+## [1.48.0](https://github.com/stairwaytowonderland/create-test/compare/v1.47.0...v1.48.0) (2026-10-17)
+
+### ✨ Features
+
+* update ([ec6334a](https://github.com/stairwaytowonderland/create-test/commit/ec6334ac3f7729392754acdafcfdcd0b36982137))
+* update ([3bcd48b](https://github.com/stairwaytowonderland/create-test/commit/3bcd48badc89fe02c75876166dbff577fbfebb46))
+* update ([0e28451](https://github.com/stairwaytowonderland/create-test/commit/0e28451e7c052ec9bea7be16fa809078bf44bf3a))
+* update ([823cd60](https://github.com/stairwaytowonderland/create-test/commit/823cd603957f5bc21c215ce14ed200b38e446447))
+* update ([3d62d50](https://github.com/stairwaytowonderland/create-test/commit/3d62d501e3e97e54aca9acbfbab301dd44a3cbd6))
+* update ([9637b57](https://github.com/stairwaytowonderland/create-test/commit/9637b575705102d13dad489d891bc1896da51eb6))
+
 ## [1.47.0](https://github.com/stairwaytowonderland/create-test/compare/v1.46.0...v1.47.0) (2026-10-17)
 
 ### ✨ Features
