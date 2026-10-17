@@ -4,11 +4,11 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - '.github/**'
-      - 'src/**'
-      - 'package*json'
-      - 'action.yaml'
+    # paths:
+    #   - '.github/**'
+    #   - 'src/**'
+    #   - 'package*json'
+    #   - 'action.yaml'
   # push:
   #   branches:
   #     - main
