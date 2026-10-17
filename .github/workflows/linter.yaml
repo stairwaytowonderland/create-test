@@ -7,8 +7,8 @@ name: 🧹 Lint Codebase
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
-    branches: [main]
+    branches:
+      - main
     paths-ignore:
       - 'CHANGELOG.md'
       - 'package.json'

@@ -2,8 +2,8 @@ name: 💬 Conventional Commit Check
 
 on:
   pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened]
+    branches:
+      - main
 
 permissions:
   contents: read

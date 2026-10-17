@@ -5,20 +5,19 @@
 name: 🚦 Code Quality (CodeQL)
 
 on:
+  schedule:
+    - cron: '31 7 * * 2'
+      timezone: America/Chicago
   pull_request:
     branches:
       - main
     paths:
       - 'src/**'
-  push:
-    branches:
-      - main
-    paths:
-      - 'src/**'
-  schedule:
-    # every Tuesday at 7:31 AM America/Chicago
-    - cron: '31 7 * * 2'
-      timezone: America/Chicago
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'src/**'
 
 permissions:
   actions: read

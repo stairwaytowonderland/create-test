@@ -13,9 +13,17 @@ on:
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - 'CHANGELOG.md'
+      - 'package.json'
+      - 'package-lock.json'
   # push:
   #   branches:
   #     - main
+  #   paths-ignore:
+  #     - 'CHANGELOG.md'
+  #     - 'package.json'
+  #     - 'package-lock.json'
   workflow_call:
   workflow_dispatch:
 

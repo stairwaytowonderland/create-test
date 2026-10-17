@@ -2,7 +2,8 @@ name: 🔂 CI Package Updates
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - 'package.json'
       - 'package-lock.json'
