@@ -37,6 +37,7 @@ permissions:
 jobs:
   check-changed:
     name: Check Changed Files
+    if: always()
     # if: github.event_name == 'push' && ! startsWith(github.ref, 'refs/tags/')
     permissions:
       contents: read
