@@ -65,7 +65,7 @@ jobs:
   test-action:
     name: GitHub Actions Test
     needs: check-changed
-    if: needs.check-changed.outputs.result == 'true'
+    if: needs.check-changed.outputs.result == 'true' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
 
     steps:
