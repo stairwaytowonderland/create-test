@@ -1,3 +1,9 @@
+## [1.55.0](https://github.com/stairwaytowonderland/create-test/compare/v1.54.0...v1.55.0) (2026-10-18)
+
+### ✨ Features
+
+* update workflow ([#3](https://github.com/stairwaytowonderland/create-test/issues/3)) ([9cfb4a5](https://github.com/stairwaytowonderland/create-test/commit/9cfb4a5806f2bb41f328bc4e356abc5a6d1f7c47))
+
 ## [1.54.0](https://github.com/stairwaytowonderland/create-test/compare/v1.53.0...v1.54.0) (2026-10-17)
 
 ### ✨ Features
