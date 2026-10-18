@@ -37,7 +37,7 @@ permissions:
 jobs:
   check-changed:
     name: Check Changed Files
-    if: github.event_name == 'push' && ! startsWith(github.ref, 'refs/tags/')
+    if: github.event_name == 'pull_request' || (github.event_name == 'push' && ! startsWith(github.ref, 'refs/tags/'))
     permissions:
       contents: read
     uses: stairwaytowonderland/.github/.github/workflows/check-changed.yaml@v1
@@ -67,6 +67,7 @@ jobs:
     needs: check-changed
     if: needs.check-changed.outputs.result == 'true'
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         id: checkout
@@ -76,7 +77,7 @@ jobs:
         id: test-action
         uses: ./
         with:
-          milliseconds: ${{ inputs.milliseconds }}
+          milliseconds: ${{ inputs.milliseconds || 1000 }}
 
       - name: Print Output
         id: output
