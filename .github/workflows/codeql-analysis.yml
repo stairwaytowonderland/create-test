@@ -48,11 +48,13 @@ permissions:
 jobs:
   codeql-analysis:
     if: |
+      github.event_name == 'pull_request' ||
+      (github.event_name == 'push' &&
       github.actor != 'github-actions[bot]' &&
       github.actor != 'dependabot[bot]' &&
       github.actor != 'renovate[bot]' &&
       github.actor != 'semantic-release[bot]' &&
-      github.actor != 'semantic-release-bot'
+      github.actor != 'semantic-release-bot')
     uses: actions/reusable-workflows/.github/workflows/codeql-analysis.yml@main
     with:
       languages: '["typescript"]'
