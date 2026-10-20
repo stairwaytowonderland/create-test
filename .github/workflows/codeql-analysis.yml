@@ -11,9 +11,23 @@ on:
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.rst'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - LICENSE
   push:
     branches:
       - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.rst'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - LICENSE
+  workflow_call:
+  workflow_dispatch:
 
 permissions:
   actions: read
