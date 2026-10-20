@@ -12,20 +12,28 @@ on:
     branches:
       - main
     paths-ignore:
+      # Exclude all root-level hidden directories and files (except .github)
+      - '.*/**'
+
+      # Other asset and documentation exclusions
+      - 'badges/**'
+      - '**/docs/**'
       - '**/*.md'
       - '**/*.rst'
-      - '**/*.yml'
-      - '**/*.yaml'
-      - LICENSE
+      - 'LICENSE'
   push:
     branches:
       - main
     paths-ignore:
+      # Exclude all root-level hidden directories and files (except .github)
+      - '.*/**'
+
+      # Other asset and documentation exclusions
+      - 'badges/**'
+      - '**/docs/**'
       - '**/*.md'
       - '**/*.rst'
-      - '**/*.yml'
-      - '**/*.yaml'
-      - LICENSE
+      - 'LICENSE'
   workflow_call:
   workflow_dispatch:
 
