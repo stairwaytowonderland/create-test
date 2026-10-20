@@ -13,7 +13,9 @@ on:
       - main
     paths-ignore:
       # Exclude all root-level hidden directories and files (except .github)
-      - '.*/**'
+      - '.devcontainer/**'
+      - '.licenses/**'
+      - '.vscode/**'
 
       # Other asset and documentation exclusions
       - 'badges/**'
@@ -26,7 +28,9 @@ on:
       - main
     paths-ignore:
       # Exclude all root-level hidden directories and files (except .github)
-      - '.*/**'
+      - '.devcontainer/**'
+      - '.licenses/**'
+      - '.vscode/**'
 
       # Other asset and documentation exclusions
       - 'badges/**'
@@ -34,8 +38,6 @@ on:
       - '**/*.md'
       - '**/*.rst'
       - 'LICENSE'
-  workflow_call:
-  workflow_dispatch:
 
 permissions:
   actions: read
