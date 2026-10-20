@@ -5,3 +5,8 @@ paths:
 paths-ignore:
   - node_modules
   - dist
+  - '**/*.md'
+  - '**/*.rst'
+  - '**/*.yml'
+  - '**/*.yaml'
+  - 'LICENSE'
