@@ -3,8 +3,7 @@
 
 # 1. Identity
 name: 🔄 CI
-description: Continuous Integration workflow for the repository
-run-name: Running CI on ${{ github.ref_name }} by @${{ github.actor }}
+run-name: CI on ${{ github.ref_name }} triggered by @${{ github.actor }}
 
 # 2. Trigger Events
 on:
