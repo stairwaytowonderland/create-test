@@ -32,6 +32,9 @@ permissions:
 
 jobs:
   check-dist:
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
     name: Check dist/
     uses: stairwaytowonderland/.github/.github/workflows/npm-check-dist.yaml@v1
     with:
