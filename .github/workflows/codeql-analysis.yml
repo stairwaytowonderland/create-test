@@ -9,6 +9,7 @@ on:
     - cron: '31 7 * * 2'
       timezone: America/Chicago
   pull_request:
+    # The branches below must be a subset of the on.push branches
     branches:
       - main
     paths-ignore:
@@ -40,10 +41,7 @@ on:
       - 'LICENSE'
 
 permissions:
-  actions: read
-  # checks: write
   contents: read
-  security-events: write
 
 jobs:
   codeql-analysis:
@@ -55,6 +53,10 @@ jobs:
       github.actor != 'renovate[bot]' &&
       github.actor != 'semantic-release[bot]' &&
       github.actor != 'semantic-release-bot')
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
     uses: actions/reusable-workflows/.github/workflows/codeql-analysis.yml@main
     with:
       languages: '["typescript"]'
