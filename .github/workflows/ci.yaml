@@ -49,7 +49,7 @@ defaults:
 jobs:
   check-changed:
     concurrency:
-      group: ${{ github.repository_id }}-${{ github.ref }}
+      group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: ${{ github.event_name == 'push' }}
     name: 📁 Check Changed Files
     permissions:
