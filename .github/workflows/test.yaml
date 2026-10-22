@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - '.github/**'
-      - 'src/**'
+      - '**/src/**'
       - 'package*.json'
       - 'action.y*ml'
   # push:
@@ -14,7 +14,7 @@ on:
   #     - main
   #   paths:
   #     # - '.github/**'
-  #     - 'src/**'
+  #     - '**/src/**'
   #     - 'package*json'
   #     - 'action.yaml'
   workflow_call:
@@ -60,7 +60,7 @@ jobs:
     with:
       paths: |
         .github/**
-        src/**
+        **/src/**
         package*.json
         action.y*ml
       ignore-authors: |

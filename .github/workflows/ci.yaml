@@ -57,7 +57,7 @@ jobs:
       contents: read
     with:
       paths: |
-        src/**
+        **/src/**
         action.y*ml
 
   info:
