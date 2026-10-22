@@ -11,11 +11,12 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.repository_id }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   package-update:
-    concurrency:
-      group: ${{ github.repository_id }}-${{ github.ref }}
-      cancel-in-progress: false
     name: Update packages
     permissions:
       actions: write
