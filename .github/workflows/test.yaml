@@ -34,7 +34,7 @@ permissions:
   contents: read
 
 jobs:
-  check-workflow-call:
+  check-workflow:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -49,9 +49,9 @@ jobs:
 
   check-changed:
     name: Check Changed Files
-    needs: check-workflow-call
+    needs: check-workflow
     if: |
-      needs.check-workflow-call.outputs.is_workflow_call != 'true' &&
+      needs.check-workflow.outputs.is_workflow_call != 'true' &&
         (github.event_name == 'pull_request' ||
         (github.event_name == 'push' && ! startsWith(github.ref, 'refs/tags/')))
     uses: stairwaytowonderland/.github/.github/workflows/check-changed.yaml@v1
@@ -69,8 +69,8 @@ jobs:
 
   basic-validation:
     name: Basic Validation
-    needs: [check-workflow-call, check-changed]
-    if: always() && (needs.check-workflow-call.outputs.is_workflow_call == 'true' || needs.check-changed.outputs.result == 'true')
+    needs: [check-workflow, check-changed]
+    if: always() && (needs.check-workflow.outputs.is_workflow_call == 'true' || needs.check-changed.outputs.result == 'true')
     uses: actions/reusable-workflows/.github/workflows/basic-validation.yml@main
     permissions:
       contents: read
@@ -80,8 +80,8 @@ jobs:
 
   test-action:
     name: GitHub Actions Test
-    needs: [check-workflow-call, check-changed]
-    if: always() && (needs.check-workflow-call.outputs.is_workflow_call == 'true' || needs.check-changed.outputs.result == 'true')
+    needs: [check-workflow, check-changed]
+    if: always() && (needs.check-workflow.outputs.is_workflow_call == 'true' || needs.check-changed.outputs.result == 'true')
     permissions:
       contents: read
       actions: read
