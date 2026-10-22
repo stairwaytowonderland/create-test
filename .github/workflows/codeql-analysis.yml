@@ -60,13 +60,15 @@ jobs:
 
   codeql-analysis:
     if: |
-      github.event_name == 'pull_request' ||
-      (github.event_name == 'push' &&
-      github.actor != 'github-actions[bot]' &&
-      github.actor != 'dependabot[bot]' &&
-      github.actor != 'renovate[bot]' &&
-      github.actor != 'semantic-release[bot]' &&
-      github.actor != 'semantic-release-bot')
+      needs.check-changed.outputs.result == 'true' && (
+        github.event_name == 'pull_request' || (
+          github.event_name == 'push' &&
+          github.actor != 'github-actions[bot]' &&
+          github.actor != 'dependabot[bot]' &&
+          github.actor != 'renovate[bot]' &&
+          github.actor != 'semantic-release[bot]' &&
+          github.actor != 'semantic-release-bot'))
+    needs: [check-changed]
     permissions:
       actions: read
       contents: read
