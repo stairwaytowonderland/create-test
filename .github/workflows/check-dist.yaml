@@ -32,11 +32,11 @@ permissions:
 
 jobs:
   check-dist:
+    name: Check dist/
+    uses: stairwaytowonderland/.github/.github/workflows/npm-check-dist.yaml@v1
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
-    name: Check dist/
-    uses: stairwaytowonderland/.github/.github/workflows/npm-check-dist.yaml@v1
     with:
       build-command: |
         npm run bundle

@@ -22,14 +22,14 @@ permissions:
 
 jobs:
   import-issues:
+    name: Import Issues
+    uses: stairwaytowonderland/issue-management/.github/workflows/import-csv-issues.yaml@v1
     concurrency:
       group: ${{ github.repository_id }}-${{ github.ref }}
       cancel-in-progress: false
-    name: Import Issues
     permissions:
       contents: read
       issues: write
-    uses: stairwaytowonderland/issue-management/.github/workflows/import-csv-issues.yaml@v1
     with:
       batch: true
       csv-path: ${{ inputs.csv-path || 'TODO.csv' }}

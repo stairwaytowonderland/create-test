@@ -11,9 +11,9 @@ permissions:
 jobs:
   conventional-commit:
     name: Run Conventional Commit Check
+    uses: stairwaytowonderland/.github/.github/workflows/conventional-commit.yaml@v1
     permissions:
       contents: read
       issues: write
       pull-requests: write
-    uses: stairwaytowonderland/.github/.github/workflows/conventional-commit.yaml@v1
     secrets: inherit
