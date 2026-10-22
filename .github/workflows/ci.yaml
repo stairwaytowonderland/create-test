@@ -57,7 +57,7 @@ jobs:
     uses: stairwaytowonderland/.github/.github/workflows/check-changed.yaml@v1
     with:
       paths: |
-        **/src/**
+        src/**
         action.yaml
 
   info:

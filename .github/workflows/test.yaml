@@ -7,7 +7,7 @@ on:
     paths:
       - '.github/**'
       - 'src/**'
-      - 'package*json'
+      - 'package*.json'
       - 'action.yaml'
   # push:
   #   branches:
@@ -43,7 +43,7 @@ jobs:
     with:
       paths: |
         .github/**
-        **/src/**
+        src/**
         package*.json
         action.yaml
       ignore-authors: |
