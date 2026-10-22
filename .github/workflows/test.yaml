@@ -36,7 +36,10 @@ permissions:
 jobs:
   check-changed:
     name: Check Changed Files
-    if: github.event_name == 'pull_request' || (github.event_name == 'push' && ! startsWith(github.ref, 'refs/tags/'))
+    if: |
+      contains(github.workflow_ref, '.github/workflows/test.yaml') &&
+        (github.event_name == 'pull_request' ||
+        (github.event_name == 'push' && ! startsWith(github.ref, 'refs/tags/')))
     permissions:
       contents: read
     uses: stairwaytowonderland/.github/.github/workflows/check-changed.yaml@v1
