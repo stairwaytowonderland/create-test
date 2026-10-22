@@ -58,7 +58,6 @@ jobs:
     with:
       paths: |
         **/src/**
-        package*.json
         action.yaml
 
   info:
