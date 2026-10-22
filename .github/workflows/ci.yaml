@@ -58,7 +58,7 @@ jobs:
     with:
       paths: |
         src/**
-        action.yaml
+        action.y*ml
 
   info:
     if: needs.check-changed.outputs.result == 'true'

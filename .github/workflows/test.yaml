@@ -8,7 +8,7 @@ on:
       - '.github/**'
       - 'src/**'
       - 'package*.json'
-      - 'action.yaml'
+      - 'action.y*ml'
   # push:
   #   branches:
   #     - main
@@ -45,7 +45,7 @@ jobs:
         .github/**
         src/**
         package*.json
-        action.yaml
+        action.y*ml
       ignore-authors: |
         github-actions[bot]
         semantic-release-bot

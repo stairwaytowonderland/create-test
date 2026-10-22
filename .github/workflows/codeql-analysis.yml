@@ -56,7 +56,7 @@ jobs:
       paths: |
         src/**
         package*.json
-        action.yaml
+        action.y*ml
 
   codeql-analysis:
     if: |
