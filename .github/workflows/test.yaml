@@ -70,7 +70,7 @@ jobs:
   basic-validation:
     name: Basic Validation
     needs: [check-workflow-call, check-changed]
-    if: always() && needs.check-workflow-call.outputs.is_workflow_call != 'true' && needs.check-changed.outputs.result == 'true'
+    if: always() && needs.check-workflow-call.outputs.is_workflow_call == 'true' && needs.check-changed.outputs.result == 'true'
     uses: actions/reusable-workflows/.github/workflows/basic-validation.yml@main
     permissions:
       contents: read
@@ -81,7 +81,7 @@ jobs:
   test-action:
     name: GitHub Actions Test
     needs: [check-workflow-call, check-changed]
-    if: always() && needs.check-workflow-call.outputs.is_workflow_call != 'true' && needs.check-changed.outputs.result == 'true'
+    if: always() && needs.check-workflow-call.outputs.is_workflow_call == 'true' && needs.check-changed.outputs.result == 'true'
     permissions:
       contents: read
       actions: read
