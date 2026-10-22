@@ -44,6 +44,20 @@ permissions:
   contents: read
 
 jobs:
+  check-changed:
+    concurrency:
+      group: ${{ github.repository_id }}-${{ github.ref }}
+      cancel-in-progress: ${{ github.event_name == 'push' }}
+    name: Check Changed Files
+    permissions:
+      contents: read
+    uses: stairwaytowonderland/.github/.github/workflows/check-changed.yaml@v1
+    with:
+      paths: |
+        **/src/**
+        package*.json
+        action.yaml
+
   codeql-analysis:
     if: |
       github.event_name == 'pull_request' ||

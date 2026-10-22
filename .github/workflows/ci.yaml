@@ -60,9 +60,6 @@ jobs:
         **/src/**
         package*.json
         action.yaml
-      ignore-authors: |
-        github-actions[bot]
-        semantic-release-bot
 
   info:
     if: needs.check-changed.outputs.result == 'true'
