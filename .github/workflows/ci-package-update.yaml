@@ -9,7 +9,7 @@ on:
       - 'package-lock.json'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   package-update:

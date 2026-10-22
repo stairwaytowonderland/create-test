@@ -99,24 +99,6 @@ Indicates if the action should run in dry-run mode.
 
 [`ActionConfig`](../../toolkit/action/interfaces/ActionConfig.md).[`inputs`](../../toolkit/action/interfaces/ActionConfig.md#inputs)
 
-***
-
-### run
-
-> **run**: () => `Promise`\<`unknown`\>
-
-Executes the main logic of the GitHub Action.
-
-#### Returns
-
-`Promise`\<`unknown`\>
-
-A promise that resolves when the action has completed its run.
-
-#### Implementation of
-
-[`ActionExec`](../../toolkit/action/interfaces/ActionExec.md).[`run`](../../toolkit/action/interfaces/ActionExec.md#run)
-
 ## Accessors
 
 ### actor
@@ -150,3 +132,21 @@ The repository associated with the GitHub Action.
 #### Implementation of
 
 [`ActionConfig`](../../toolkit/action/interfaces/ActionConfig.md).[`repo`](../../toolkit/action/interfaces/ActionConfig.md#repo)
+
+## Methods
+
+### run()
+
+> **run**(): `Promise`\<`unknown`\>
+
+Executes the main logic of the GitHub Action.
+
+#### Returns
+
+`Promise`\<`unknown`\>
+
+A promise that resolves when the action has completed its run.
+
+#### Implementation of
+
+[`ActionExec`](../../toolkit/action/interfaces/ActionExec.md).[`run`](../../toolkit/action/interfaces/ActionExec.md#run)

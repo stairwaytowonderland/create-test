@@ -8,11 +8,11 @@
 
 Represents the configuration for a GitHub Action that includes a `run` method.
 
-## Properties
+## Methods
 
-### run
+### run()
 
-> **run**: () => `Promise`\<`unknown`\>
+> **run**(): `Promise`\<`unknown`\>
 
 Executes the main logic of the GitHub Action.
 

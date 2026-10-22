@@ -43,7 +43,7 @@ jobs:
     with:
       paths: |
         .github/**
-        src/**
+        **/src/**
         package*.json
         action.yaml
       ignore-authors: |

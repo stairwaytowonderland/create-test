@@ -19,7 +19,8 @@ export interface ActionExec {
 	 *
 	 * @returns A promise that resolves when the action has completed its run.
 	 */
-	run: () => Promise<unknown>
+	// run: () => Promise<unknown>
+	run(): Promise<unknown>
 }
 
 /**

@@ -110,7 +110,9 @@ export class Action implements ActionConfig, ActionExec {
 	/** The action inputs provided to the GitHub Action. */
 	inputs?: ActionInputs
 
-	run: () => Promise<unknown>
+	run(): Promise<unknown> {
+		return main(this)
+	}
 
 	/**
 	 * Returns the actor (user) who triggered the GitHub Action.
@@ -137,8 +139,6 @@ export class Action implements ActionConfig, ActionExec {
 		this.context = context
 		this.inputs = inputs ?? getInputs()
 		this.dryRun = dryRun ?? this.inputs?.dryRun ?? false
-		// this.run = main.bind(this)
-		this.run = () => main(this)
 		core.debug(`Initializing Action with dryRun: ${this.dryRun}`)
 	}
 }
