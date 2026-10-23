@@ -13,7 +13,7 @@ Implements the RepoAction interface and provides methods to run the action.
 ## Implements
 
 - [`ActionConfig`](../../toolkit/action/interfaces/ActionConfig.md)
-- [`ActionExec`](../../toolkit/action/interfaces/ActionExec.md)
+- [`ActionRun`](../../toolkit/action/interfaces/ActionRun.md)
 
 ## Constructors
 
@@ -149,4 +149,4 @@ A promise that resolves when the action has completed its run.
 
 #### Implementation of
 
-[`ActionExec`](../../toolkit/action/interfaces/ActionExec.md).[`run`](../../toolkit/action/interfaces/ActionExec.md#run)
+[`ActionRun`](../../toolkit/action/interfaces/ActionRun.md).[`run`](../../toolkit/action/interfaces/ActionRun.md#run)

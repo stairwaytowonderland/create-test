@@ -13,7 +13,7 @@ export type { Context as GitHubContext }
 /**
  * Represents the configuration for a GitHub Action that includes a `run` method.
  */
-export interface ActionExec {
+export interface ActionRun {
 	/**
 	 * Executes the main logic of the GitHub Action.
 	 *

@@ -5,7 +5,7 @@
  */
 
 import * as core from '@actions/core'
-import type { ActionExec, ActionConfig, ActionInputs, GitHubContext, SimpleRepository } from '#toolkit'
+import type { ActionRun, ActionConfig, ActionInputs, GitHubContext, SimpleRepository } from '#toolkit'
 import { ActionRepository } from '#toolkit'
 import { millisecondsFromInput } from './utils.js'
 
@@ -102,7 +102,7 @@ export const delay = (milliseconds: number): Promise<string> => {
  *
  * Implements the RepoAction interface and provides methods to run the action.
  */
-export class Action implements ActionConfig, ActionExec {
+export class Action implements ActionConfig, ActionRun {
 	/** Indicates if the action should run in dry-run mode. */
 	dryRun: boolean
 	/** The GitHub context object. */

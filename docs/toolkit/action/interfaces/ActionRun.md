@@ -2,9 +2,9 @@
 
 ***
 
-[create-test](../../../README.md) / [toolkit/action](../README.md) / ActionExec
+[create-test](../../../README.md) / [toolkit/action](../README.md) / ActionRun
 
-# Interface: ActionExec
+# Interface: ActionRun
 
 Represents the configuration for a GitHub Action that includes a `run` method.
 
