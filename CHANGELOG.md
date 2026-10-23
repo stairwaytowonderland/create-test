@@ -1,3 +1,9 @@
+## [1.78.0](https://github.com/stairwaytowonderland/create-test/compare/v1.77.0...v1.78.0) (2026-10-23)
+
+### ✨ Features
+
+* upates ([c9c2f9b](https://github.com/stairwaytowonderland/create-test/commit/c9c2f9b1194cc49530a0875c7354cffb11954d04))
+
 ## [1.77.0](https://github.com/stairwaytowonderland/create-test/compare/v1.76.0...v1.77.0) (2026-10-23)
 
 ### ✨ Features
