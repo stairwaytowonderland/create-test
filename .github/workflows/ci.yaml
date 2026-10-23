@@ -3,7 +3,7 @@
 
 # * 1. Identity
 name: 🔄 CI
-run-name: CI on ${{ github.ref_name }} triggered by @${{ github.actor }}
+run-name: ${{ github.workflow }} on ${{ github.ref_name }} triggered by @${{ github.actor }}
 
 # * 2. Trigger Events
 on:
