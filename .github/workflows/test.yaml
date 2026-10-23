@@ -60,12 +60,12 @@ jobs:
     with:
       paths: |
         .github/**
+        action.y*ml
+        package*.json
         **/src/**
         !**/src/**/typedoc*.json
         !**/src/**/badges/*
         !**/src/**/docs/**/*
-        package*.json
-        action.y*ml
       ignore-authors: |
         github-actions[bot]
         semantic-release-bot

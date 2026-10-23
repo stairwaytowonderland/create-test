@@ -57,8 +57,11 @@ jobs:
       contents: read
     with:
       paths: |
-        **/src/**
         action.y*ml
+        **/src/**
+        !**/src/**/typedoc*.json
+        !**/src/**/badges/*
+        !**/src/**/docs/**/*
 
   info:
     name: 🪏 Gather Info
