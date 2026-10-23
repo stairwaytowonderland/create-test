@@ -75,8 +75,8 @@ jobs:
 
   test:
     name: 🔔 Run Action Tests
-    needs: [info]
-    if: needs.info.outputs.is-release-workflow == 'true'
+    needs: [check-changed, info]
+    if: needs.check-changed.outputs.result == 'true' && needs.info.outputs.is-release-workflow == 'true'
     permissions:
       contents: read
       actions: read
@@ -85,13 +85,14 @@ jobs:
 
   check-dist:
     name: 🏗️ Check Transpiled JavaScript
-    needs: [info]
-    if: needs.info.outputs.is-release-workflow == 'true'
+    needs: [check-changed, info]
+    if: needs.check-changed.outputs.result == 'true' && needs.info.outputs.is-release-workflow == 'true'
     uses: ./.github/workflows/check-dist.yaml
 
   release:
     name: 🚀 Release a New Version
-    needs: [info, test, check-dist]
+    needs: [check-changed, info, test, check-dist]
+    if: always() || (needs.test.outputs.completed == 'true' && needs.check-dist.outputs.completed == 'true')
     uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
     permissions:
       actions: write

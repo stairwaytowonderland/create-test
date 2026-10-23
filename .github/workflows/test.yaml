@@ -23,6 +23,10 @@ on:
         description: 'Milliseconds to wait'
         type: number
         default: 2000
+    outputs:
+      completed:
+        description: 'Indicates if the workflow completed'
+        value: true
   workflow_dispatch:
     inputs:
       milliseconds:
