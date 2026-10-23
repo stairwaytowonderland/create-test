@@ -6,7 +6,7 @@
 
 # Interface: ActionConfig
 
-Defined in: [src/toolkit/action.ts:28](https://github.com/stairwaytowonderland/create-test/blob/b46546d95d3642e39fc686d8eb17bf9f255add49/src/toolkit/action.ts#L28)
+Defined in: [src/toolkit/action.ts:29](https://github.com/stairwaytowonderland/create-test/blob/023273d2237c3506b62b5fdc17a86a0e6ff3d75b/src/toolkit/action.ts#L29)
 
 Represents the base configuration for a GitHub Actions run.
 
@@ -16,7 +16,7 @@ Represents the base configuration for a GitHub Actions run.
 
 > **context**: [`GitHubContext`](GitHubContext.md)
 
-Defined in: [src/toolkit/action.ts:33](https://github.com/stairwaytowonderland/create-test/blob/b46546d95d3642e39fc686d8eb17bf9f255add49/src/toolkit/action.ts#L33)
+Defined in: [src/toolkit/action.ts:34](https://github.com/stairwaytowonderland/create-test/blob/023273d2237c3506b62b5fdc17a86a0e6ff3d75b/src/toolkit/action.ts#L34)
 
 The GitHub context object.
 
@@ -26,7 +26,7 @@ The GitHub context object.
 
 > **dryRun**: `boolean`
 
-Defined in: [src/toolkit/action.ts:30](https://github.com/stairwaytowonderland/create-test/blob/b46546d95d3642e39fc686d8eb17bf9f255add49/src/toolkit/action.ts#L30)
+Defined in: [src/toolkit/action.ts:31](https://github.com/stairwaytowonderland/create-test/blob/023273d2237c3506b62b5fdc17a86a0e6ff3d75b/src/toolkit/action.ts#L31)
 
 Indicates if the action should run in dry-run mode.
 
@@ -36,7 +36,7 @@ Indicates if the action should run in dry-run mode.
 
 > `optional` **inputs?**: `object`
 
-Defined in: [src/toolkit/action.ts:39](https://github.com/stairwaytowonderland/create-test/blob/b46546d95d3642e39fc686d8eb17bf9f255add49/src/toolkit/action.ts#L39)
+Defined in: [src/toolkit/action.ts:40](https://github.com/stairwaytowonderland/create-test/blob/023273d2237c3506b62b5fdc17a86a0e6ff3d75b/src/toolkit/action.ts#L40)
 
 The action inputs provided to the GitHub Action.
 
@@ -58,6 +58,6 @@ Indicates if the action should run in dry-run mode.
 
 > **repo**: [`SimpleRepository`](SimpleRepository.md)
 
-Defined in: [src/toolkit/action.ts:36](https://github.com/stairwaytowonderland/create-test/blob/b46546d95d3642e39fc686d8eb17bf9f255add49/src/toolkit/action.ts#L36)
+Defined in: [src/toolkit/action.ts:37](https://github.com/stairwaytowonderland/create-test/blob/023273d2237c3506b62b5fdc17a86a0e6ff3d75b/src/toolkit/action.ts#L37)
 
 The repository associated with the GitHub Action.

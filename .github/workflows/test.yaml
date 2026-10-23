@@ -61,6 +61,9 @@ jobs:
       paths: |
         .github/**
         **/src/**
+        !**/src/**/typedoc*.json
+        !**/src/**/badges/*
+        !**/src/**/docs/**/*
         package*.json
         action.y*ml
       ignore-authors: |
