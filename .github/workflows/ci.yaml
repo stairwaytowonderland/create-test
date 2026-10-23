@@ -3,7 +3,7 @@
 
 # * 1. Identity
 name: 🔄 CI
-run-name: '(#${{ github.run_number }}) ${{ github.workflow }} on ${{ github.ref_name }} triggered by @${{ github.actor }} (${{ github.event.head_commit.message }})'
+run-name: ${{ github.event_name == 'push' && github.event.head_commit.message || github.workflow }}
 
 # * 2. Trigger Events
 on:
