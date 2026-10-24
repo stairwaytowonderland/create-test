@@ -74,12 +74,13 @@ jobs:
   release:
     name: 🚀 Release a New Version
     needs: [info, test, check-dist]
+    if: (needs.info.outputs.is-release-workflow == 'true' && always()) || (needs.test.outputs.completed == 'true' && needs.check-dist.outputs.completed == 'true')
+    uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
     permissions:
       actions: write
       contents: write
       issues: write
       pull-requests: write
-    uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
     with:
       dispatch-workflow: ${{ needs.info.outputs.has-release-tags != 'true' && 'ci.yaml' || '' }}
     secrets: inherit
