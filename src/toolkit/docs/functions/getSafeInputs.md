@@ -8,7 +8,7 @@
 
 > **getSafeInputs**\<`K`\>(`inputs?`, ...`keys`): `Omit`\<[`ActionInputs`](../type-aliases/ActionInputs.md), `K`\>
 
-Defined in: [src/toolkit/action.ts:69](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/action.ts#L69)
+Defined in: [src/toolkit/action.ts:69](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/action.ts#L69)
 
 Filters out specified keys from the action inputs object.
 

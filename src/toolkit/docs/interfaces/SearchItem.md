@@ -6,7 +6,7 @@
 
 # Interface: SearchItem
 
-Defined in: [src/toolkit/api.ts:134](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L134)
+Defined in: [src/toolkit/api.ts:134](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L134)
 
 Represents a single search result item from the GitHub API.
 
@@ -16,7 +16,7 @@ Represents a single search result item from the GitHub API.
 
 > **node\_id**: `string`
 
-Defined in: [src/toolkit/api.ts:136](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L136)
+Defined in: [src/toolkit/api.ts:136](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L136)
 
 The unique node ID of the search result item.
 
@@ -26,7 +26,7 @@ The unique node ID of the search result item.
 
 > **number**: `number`
 
-Defined in: [src/toolkit/api.ts:138](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L138)
+Defined in: [src/toolkit/api.ts:138](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L138)
 
 The issue or pull request number.
 
@@ -36,7 +36,7 @@ The issue or pull request number.
 
 > **labels**: `object`[]
 
-Defined in: [src/toolkit/api.ts:140](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L140)
+Defined in: [src/toolkit/api.ts:140](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L140)
 
 The labels associated with the issue or pull request.
 
@@ -52,7 +52,7 @@ The name of the label.
 
 > **title**: `string`
 
-Defined in: [src/toolkit/api.ts:145](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L145)
+Defined in: [src/toolkit/api.ts:145](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L145)
 
 The title of the issue or pull request.
 
@@ -62,7 +62,7 @@ The title of the issue or pull request.
 
 > **html\_url**: `string`
 
-Defined in: [src/toolkit/api.ts:147](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L147)
+Defined in: [src/toolkit/api.ts:147](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L147)
 
 The URL of the issue or pull request on GitHub.
 
@@ -72,7 +72,7 @@ The URL of the issue or pull request on GitHub.
 
 > **repository\_url**: `string`
 
-Defined in: [src/toolkit/api.ts:149](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L149)
+Defined in: [src/toolkit/api.ts:149](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L149)
 
 The URL of the repository containing the issue or pull request.
 
@@ -82,6 +82,6 @@ The URL of the repository containing the issue or pull request.
 
 > **created\_at**: `Date`
 
-Defined in: [src/toolkit/api.ts:151](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L151)
+Defined in: [src/toolkit/api.ts:151](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L151)
 
 The date and time when the issue or pull request was created.

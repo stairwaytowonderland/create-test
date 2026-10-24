@@ -8,7 +8,7 @@
 
 > **getAuth**(`action`, `failOnError?`, `ghToken?`): `Promise`\<`Octokit` & `Api` & `object` \| `undefined`\>
 
-Defined in: [src/toolkit/api.ts:77](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L77)
+Defined in: [src/toolkit/api.ts:77](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L77)
 
 Retrieves an authenticated Octokit client using the provided GitHub token or the token from the action inputs.
 
