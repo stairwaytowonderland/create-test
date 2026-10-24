@@ -33959,7 +33959,6 @@ class Action {
  * This file contains the main entry for the GitHub Action,
  * which gathers inputs and invokes the run function.
  *
- * @module Main
  * @packageDocumentation
  */
 /**
@@ -33993,7 +33992,6 @@ const run = async () => {
  *
  * This file simply imports and runs the main logic of the action.
  *
- * @module Index
  * @packageDocumentation
  */
 /* istanbul ignore next */
