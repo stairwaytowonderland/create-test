@@ -3,7 +3,6 @@
 
 # 1. Identity
 name: 🔄 CI
-run-name: CI on ${{ github.ref_name }} triggered by @${{ github.actor }}
 
 # 2. Trigger Events
 on:
@@ -47,8 +46,26 @@ defaults:
 
 # 5. Job Execution
 jobs:
+  changed:
+    name: 📁 Check Changed Files
+    uses: stairwaytowonderland/.github/.github/workflows/check-changed.yaml@v1
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: ${{ github.event_name == 'push' }}
+    permissions:
+      contents: read
+    with:
+      paths: |
+        action.y*ml
+        **/src/**
+        !**/src/**/typedoc*.json
+        !**/src/**/badges/*
+        !**/src/**/docs/**/*
+
   info:
     name: 🪏 Gather Info
+    needs: [changed]
+    if: needs.changed.outputs.result == 'true'
     permissions:
       contents: read
     uses: stairwaytowonderland/.github/.github/workflows/ci-meta.yaml@v1
@@ -56,9 +73,9 @@ jobs:
       publish: ${{ (github.event_name == 'workflow_dispatch' && (inputs.tag != '' && inputs.notes-b64 != '')) || startsWith(github.ref, 'refs/tags/') }}
 
   test:
-    if: needs.info.outputs.is-release-workflow == 'true'
     name: 🔔 Run Action Tests
-    needs: [info]
+    needs: [changed, info]
+    if: needs.changed.outputs.result == 'true' && needs.info.outputs.is-release-workflow == 'true'
     permissions:
       contents: read
       actions: read
@@ -66,15 +83,15 @@ jobs:
     secrets: inherit
 
   check-dist:
-    if: needs.info.outputs.is-release-workflow == 'true'
     name: 🏗️ Check Transpiled JavaScript
-    needs: [info]
+    needs: [changed, info]
+    if: needs.changed.outputs.result == 'true' && needs.info.outputs.is-release-workflow == 'true'
     uses: ./.github/workflows/check-dist.yaml
 
   release:
     name: 🚀 Release a New Version
     needs: [info, test, check-dist]
-    if: (needs.info.outputs.is-release-workflow == 'true' && always()) || (needs.test.outputs.completed == 'true' && needs.check-dist.outputs.completed == 'true')
+    if: (always() && needs.info.outputs.is-release-workflow == 'true' && needs.test.outputs.completed != 'true' && needs.check-dist.outputs.completed != 'true')
     uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
     permissions:
       actions: write
