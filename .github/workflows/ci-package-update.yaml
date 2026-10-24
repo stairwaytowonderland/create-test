@@ -15,6 +15,9 @@ jobs:
   package-update:
     name: Update packages
     uses: stairwaytowonderland/.github/.github/workflows/ci-package-update.yaml@v1
+    # concurrency:
+    #   group: ${{ github.repository_id }}-${{ github.ref }}
+    #   cancel-in-progress: false
     permissions:
       actions: write
       contents: write
