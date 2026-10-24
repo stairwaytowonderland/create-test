@@ -1,8 +1,8 @@
-[**create-test**](../../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[create-test](../../../README.md) / [toolkit/action](../README.md) / ActionRepository
+[create-test](../../README.md) / [Toolkit](../README.md) / ActionRepository
 
 # Class: ActionRepository
 
@@ -68,18 +68,6 @@ The SimpleRepository object containing repository information.
 
 ## Properties
 
-### owner?
-
-> `optional` **owner?**: `string`
-
-The repository owner.
-
-#### Implementation of
-
-[`SimpleRepository`](../interfaces/SimpleRepository.md).[`owner`](../interfaces/SimpleRepository.md#owner)
-
-***
-
 ### repo?
 
 > `optional` **repo?**: `string`
@@ -89,6 +77,18 @@ The repository name.
 #### Implementation of
 
 [`SimpleRepository`](../interfaces/SimpleRepository.md).[`repo`](../interfaces/SimpleRepository.md#repo)
+
+***
+
+### owner?
+
+> `optional` **owner?**: `string`
+
+The repository owner.
+
+#### Implementation of
+
+[`SimpleRepository`](../interfaces/SimpleRepository.md).[`owner`](../interfaces/SimpleRepository.md#owner)
 
 ## Accessors
 

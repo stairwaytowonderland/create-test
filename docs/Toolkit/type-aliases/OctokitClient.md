@@ -1,8 +1,8 @@
-[**create-test**](../../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[create-test](../../../README.md) / [toolkit/api](../README.md) / OctokitClient
+[create-test](../../README.md) / [Toolkit](../README.md) / OctokitClient
 
 # Type Alias: OctokitClient
 

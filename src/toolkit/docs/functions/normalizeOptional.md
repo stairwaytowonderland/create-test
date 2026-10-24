@@ -1,14 +1,14 @@
-[**create-test**](../README.md)
+[**Toolkit**](../README.md)
 
 ***
 
-[create-test](../README.md) / normalizeOptional
+[Toolkit](../README.md) / normalizeOptional
 
 # Function: normalizeOptional()
 
 > **normalizeOptional**(`value?`): `string` \| `undefined`
 
-Defined in: [src/toolkit/utils.ts:14](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/utils.ts#L14)
+Defined in: [src/toolkit/utils.ts:14](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/utils.ts#L14)
 
 Normalizes an optional string value.
 

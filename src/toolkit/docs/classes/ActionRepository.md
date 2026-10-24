@@ -1,12 +1,12 @@
-[**create-test**](../README.md)
+[**Toolkit**](../README.md)
 
 ***
 
-[create-test](../README.md) / ActionRepository
+[Toolkit](../README.md) / ActionRepository
 
 # Class: ActionRepository
 
-Defined in: [src/toolkit/action.ts:109](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L109)
+Defined in: [src/toolkit/action.ts:109](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L109)
 
 Provides methods to parse and normalize repository information from various sources.
 
@@ -20,7 +20,7 @@ Provides methods to parse and normalize repository information from various sour
 
 > **new ActionRepository**(): `ActionRepository`
 
-Defined in: [src/toolkit/action.ts:127](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L127)
+Defined in: [src/toolkit/action.ts:127](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L127)
 
 Initializes an ActionRepository instance with default values.
 
@@ -32,7 +32,7 @@ Initializes an ActionRepository instance with default values.
 
 > **new ActionRepository**(`name?`, `owner?`): `ActionRepository`
 
-Defined in: [src/toolkit/action.ts:135](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L135)
+Defined in: [src/toolkit/action.ts:135](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L135)
 
 Initializes an ActionRepository instance with the specified repository name and owner.
 
@@ -58,7 +58,7 @@ The repository owner (optional if name contains a slash).
 
 > **new ActionRepository**(`repo`): `ActionRepository`
 
-Defined in: [src/toolkit/action.ts:142](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L142)
+Defined in: [src/toolkit/action.ts:142](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L142)
 
 Initializes an ActionRepository instance from an existing SimpleRepository object.
 
@@ -76,31 +76,31 @@ The SimpleRepository object containing repository information.
 
 ## Properties
 
-### owner?
-
-> `optional` **owner?**: `string`
-
-Defined in: [src/toolkit/action.ts:114](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L114)
-
-The repository owner.
-
-#### Implementation of
-
-[`SimpleRepository`](../interfaces/SimpleRepository.md).[`owner`](../interfaces/SimpleRepository.md#owner)
-
-***
-
 ### repo?
 
 > `optional` **repo?**: `string`
 
-Defined in: [src/toolkit/action.ts:111](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L111)
+Defined in: [src/toolkit/action.ts:111](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L111)
 
 The repository name.
 
 #### Implementation of
 
 [`SimpleRepository`](../interfaces/SimpleRepository.md).[`repo`](../interfaces/SimpleRepository.md#repo)
+
+***
+
+### owner?
+
+> `optional` **owner?**: `string`
+
+Defined in: [src/toolkit/action.ts:114](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L114)
+
+The repository owner.
+
+#### Implementation of
+
+[`SimpleRepository`](../interfaces/SimpleRepository.md).[`owner`](../interfaces/SimpleRepository.md#owner)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ The repository name.
 
 > **get** **fullName**(): `string` \| `undefined`
 
-Defined in: [src/toolkit/action.ts:120](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L120)
+Defined in: [src/toolkit/action.ts:120](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L120)
 
 The full repository name in the format "owner/repo".
 Dynamically updates if the name or owner changes.
@@ -131,7 +131,7 @@ The full repository name in the format "owner/repo".
 
 > **fromApiUrl**(`apiUrl`): `this`
 
-Defined in: [src/toolkit/action.ts:229](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L229)
+Defined in: [src/toolkit/action.ts:229](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L229)
 
 Parses the repository owner and name from a GitHub API URL and updates the instance accordingly.
 
@@ -155,7 +155,7 @@ https://api.github.com/repos/owner/repo
 
 > **fromContextRepo**(`context`): `this`
 
-Defined in: [src/toolkit/action.ts:245](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/action.ts#L245)
+Defined in: [src/toolkit/action.ts:245](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/action.ts#L245)
 
 Updates the repository owner and name based on the provided GitHub Actions context.
 

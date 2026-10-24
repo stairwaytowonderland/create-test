@@ -1,14 +1,22 @@
-[**create-test**](../../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[create-test](../../../README.md) / [toolkit/action](../README.md) / ActionConfig
+[create-test](../../README.md) / [Toolkit](../README.md) / ActionConfig
 
 # Interface: ActionConfig
 
 Represents the base configuration for a GitHub Actions run.
 
 ## Properties
+
+### dryRun
+
+> **dryRun**: `boolean`
+
+Indicates if the action should run in dry-run mode.
+
+***
 
 ### context
 
@@ -18,11 +26,11 @@ The GitHub context object.
 
 ***
 
-### dryRun
+### repo
 
-> **dryRun**: `boolean`
+> **repo**: [`SimpleRepository`](SimpleRepository.md)
 
-Indicates if the action should run in dry-run mode.
+The repository associated with the GitHub Action.
 
 ***
 
@@ -43,11 +51,3 @@ The action input key-value pairs.
 > **dryRun**: `boolean`
 
 Indicates if the action should run in dry-run mode.
-
-***
-
-### repo
-
-> **repo**: [`SimpleRepository`](SimpleRepository.md)
-
-The repository associated with the GitHub Action.

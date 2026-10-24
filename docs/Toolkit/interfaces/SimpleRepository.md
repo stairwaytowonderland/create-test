@@ -1,8 +1,8 @@
-[**create-test**](../../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[create-test](../../../README.md) / [toolkit/action](../README.md) / SimpleRepository
+[create-test](../../README.md) / [Toolkit](../README.md) / SimpleRepository
 
 # Interface: SimpleRepository
 
@@ -21,14 +21,6 @@ Extends the Partial type to allow optional repository properties.
 
 ## Properties
 
-### fullName?
-
-> `optional` **fullName?**: `string`
-
-The full repository name in the format "owner/repo".
-
-***
-
 ### owner?
 
 > `optional` **owner?**: `string`
@@ -46,3 +38,11 @@ The full repository name in the format "owner/repo".
 #### Inherited from
 
 `Partial.repo`
+
+***
+
+### fullName?
+
+> `optional` **fullName?**: `string`
+
+The full repository name in the format "owner/repo".

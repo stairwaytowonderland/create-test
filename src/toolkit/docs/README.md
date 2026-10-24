@@ -1,8 +1,10 @@
-**create-test**
+**Toolkit**
 
 ***
 
-# create-test
+# Toolkit Reference
+
+Exports all the modules from the toolkit.
 
 ## Classes
 
@@ -10,11 +12,11 @@
 
 ## Interfaces
 
-- [ActionConfig](interfaces/ActionConfig.md)
-- [ActionRun](interfaces/ActionRun.md)
 - [GitHubContext](interfaces/GitHubContext.md)
-- [SearchItem](interfaces/SearchItem.md)
+- [ActionRun](interfaces/ActionRun.md)
+- [ActionConfig](interfaces/ActionConfig.md)
 - [SimpleRepository](interfaces/SimpleRepository.md)
+- [SearchItem](interfaces/SearchItem.md)
 
 ## Type Aliases
 
@@ -23,11 +25,11 @@
 
 ## Functions
 
+- [getSafeInputs](functions/getSafeInputs.md)
+- [isOctokitAuthenticated](functions/isOctokitAuthenticated.md)
 - [getAuth](functions/getAuth.md)
 - [getIssueFromContext](functions/getIssueFromContext.md)
 - [getPrFromContext](functions/getPrFromContext.md)
-- [getSafeInputs](functions/getSafeInputs.md)
-- [isOctokitAuthenticated](functions/isOctokitAuthenticated.md)
-- [kebabToCamel](functions/kebabToCamel.md)
-- [normalizeOptional](functions/normalizeOptional.md)
 - [searchIssuesAndPullRequests](functions/searchIssuesAndPullRequests.md)
+- [normalizeOptional](functions/normalizeOptional.md)
+- [kebabToCamel](functions/kebabToCamel.md)

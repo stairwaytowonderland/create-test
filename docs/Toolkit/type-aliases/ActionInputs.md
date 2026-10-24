@@ -1,8 +1,8 @@
-[**create-test**](../../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[create-test](../../../README.md) / [toolkit/action](../README.md) / ActionInputs
+[create-test](../../README.md) / [Toolkit](../README.md) / ActionInputs
 
 # Type Alias: ActionInputs
 

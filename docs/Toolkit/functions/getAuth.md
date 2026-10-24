@@ -1,8 +1,8 @@
-[**create-test**](../../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[create-test](../../../README.md) / [toolkit/api](../README.md) / getAuth
+[create-test](../../README.md) / [Toolkit](../README.md) / getAuth
 
 # Function: getAuth()
 
@@ -16,7 +16,7 @@ If the environment is set to 'test', the function will skip live GitHub API auth
 
 ### action
 
-[`ActionConfig`](../../action/interfaces/ActionConfig.md)
+[`ActionConfig`](../interfaces/ActionConfig.md)
 
 The repository action containing repository and input details.
 

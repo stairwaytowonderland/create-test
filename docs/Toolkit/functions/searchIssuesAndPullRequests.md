@@ -1,8 +1,8 @@
-[**create-test**](../../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[create-test](../../../README.md) / [toolkit/api](../README.md) / searchIssuesAndPullRequests
+[create-test](../../README.md) / [Toolkit](../README.md) / searchIssuesAndPullRequests
 
 # Function: searchIssuesAndPullRequests()
 

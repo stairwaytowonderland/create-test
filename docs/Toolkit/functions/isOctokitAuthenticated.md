@@ -1,8 +1,8 @@
-[**create-test**](../../../README.md)
+[**create-test**](../../README.md)
 
 ***
 
-[create-test](../../../README.md) / [toolkit/api](../README.md) / isOctokitAuthenticated
+[create-test](../../README.md) / [Toolkit](../README.md) / isOctokitAuthenticated
 
 # Function: isOctokitAuthenticated()
 
@@ -20,7 +20,7 @@ The Octokit client to check authentication for.
 
 ### action
 
-[`ActionConfig`](../../action/interfaces/ActionConfig.md)
+[`ActionConfig`](../interfaces/ActionConfig.md)
 
 The repository action containing repository and input details.
 

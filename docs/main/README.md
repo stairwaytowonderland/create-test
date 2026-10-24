@@ -2,16 +2,11 @@
 
 ***
 
-[create-test](../README.md) / main
+[create-test](../README.md) / Main
 
-# main
+# Main
 
-## Functions
+Main entry for the GitHub Action.
 
-- [run](functions/run.md)
-
-## References
-
-### default
-
-Renames and re-exports [run](functions/run.md)
+This file contains the main entry for the GitHub Action,
+which gathers inputs and invokes the run function.

@@ -1,8 +1,8 @@
-[**create-test**](../README.md)
+[**Toolkit**](../README.md)
 
 ***
 
-[create-test](../README.md) / GitHubContext
+[Toolkit](../README.md) / GitHubContext
 
 # Interface: GitHubContext
 
@@ -11,6 +11,48 @@ Defined in: node\_modules/@actions/github/lib/context.d.ts:2
 Represents the GitHub context object provided by the `@actions/github` library.
 
 ## Properties
+
+### payload
+
+> **payload**: `WebhookPayload`
+
+Defined in: node\_modules/@actions/github/lib/context.d.ts:6
+
+Webhook payload object that triggered the workflow
+
+***
+
+### eventName
+
+> **eventName**: `string`
+
+Defined in: node\_modules/@actions/github/lib/context.d.ts:7
+
+***
+
+### sha
+
+> **sha**: `string`
+
+Defined in: node\_modules/@actions/github/lib/context.d.ts:8
+
+***
+
+### ref
+
+> **ref**: `string`
+
+Defined in: node\_modules/@actions/github/lib/context.d.ts:9
+
+***
+
+### workflow
+
+> **workflow**: `string`
+
+Defined in: node\_modules/@actions/github/lib/context.d.ts:10
+
+***
 
 ### action
 
@@ -28,53 +70,11 @@ Defined in: node\_modules/@actions/github/lib/context.d.ts:12
 
 ***
 
-### apiUrl
-
-> **apiUrl**: `string`
-
-Defined in: node\_modules/@actions/github/lib/context.d.ts:17
-
-***
-
-### eventName
-
-> **eventName**: `string`
-
-Defined in: node\_modules/@actions/github/lib/context.d.ts:7
-
-***
-
-### graphqlUrl
-
-> **graphqlUrl**: `string`
-
-Defined in: node\_modules/@actions/github/lib/context.d.ts:19
-
-***
-
 ### job
 
 > **job**: `string`
 
 Defined in: node\_modules/@actions/github/lib/context.d.ts:13
-
-***
-
-### payload
-
-> **payload**: `WebhookPayload`
-
-Defined in: node\_modules/@actions/github/lib/context.d.ts:6
-
-Webhook payload object that triggered the workflow
-
-***
-
-### ref
-
-> **ref**: `string`
-
-Defined in: node\_modules/@actions/github/lib/context.d.ts:9
 
 ***
 
@@ -86,6 +86,14 @@ Defined in: node\_modules/@actions/github/lib/context.d.ts:14
 
 ***
 
+### runNumber
+
+> **runNumber**: `number`
+
+Defined in: node\_modules/@actions/github/lib/context.d.ts:15
+
+***
+
 ### runId
 
 > **runId**: `number`
@@ -94,11 +102,11 @@ Defined in: node\_modules/@actions/github/lib/context.d.ts:16
 
 ***
 
-### runNumber
+### apiUrl
 
-> **runNumber**: `number`
+> **apiUrl**: `string`
 
-Defined in: node\_modules/@actions/github/lib/context.d.ts:15
+Defined in: node\_modules/@actions/github/lib/context.d.ts:17
 
 ***
 
@@ -110,19 +118,11 @@ Defined in: node\_modules/@actions/github/lib/context.d.ts:18
 
 ***
 
-### sha
+### graphqlUrl
 
-> **sha**: `string`
+> **graphqlUrl**: `string`
 
-Defined in: node\_modules/@actions/github/lib/context.d.ts:8
-
-***
-
-### workflow
-
-> **workflow**: `string`
-
-Defined in: node\_modules/@actions/github/lib/context.d.ts:10
+Defined in: node\_modules/@actions/github/lib/context.d.ts:19
 
 ## Accessors
 
@@ -138,10 +138,6 @@ Defined in: node\_modules/@actions/github/lib/context.d.ts:24
 
 `object`
 
-###### number
-
-> **number**: `number`
-
 ###### owner
 
 > **owner**: `string`
@@ -149,6 +145,10 @@ Defined in: node\_modules/@actions/github/lib/context.d.ts:24
 ###### repo
 
 > **repo**: `string`
+
+###### number
+
+> **number**: `number`
 
 ***
 

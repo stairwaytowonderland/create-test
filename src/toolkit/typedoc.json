@@ -2,9 +2,15 @@
 	"$schema": "https://typedoc.org/schema.json",
 	"readme": "none",
 	"disableSources": false,
+	"name": "Toolkit",
 	"plugin": ["typedoc-plugin-markdown"],
+	"pageTitleTemplates": {
+		"index": "{projectName} Reference"
+	},
 	"entryPointStrategy": "resolve",
-	"entryPoints": ["."],
+	"entryPoints": ["./index.ts"],
+	"sort": ["kind", "instance-first", "required-first", "alphabetical"],
+	"sortEntryPoints": true,
 	"out": "./docs",
 	"exclude": ["**/__tests__/**", "**/__fixtures__/**", "**/__utils__/**", "**/docs/**", "**/*.test.ts", "index.ts"]
 }

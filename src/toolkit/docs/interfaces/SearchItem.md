@@ -1,34 +1,34 @@
-[**create-test**](../README.md)
+[**Toolkit**](../README.md)
 
 ***
 
-[create-test](../README.md) / SearchItem
+[Toolkit](../README.md) / SearchItem
 
 # Interface: SearchItem
 
-Defined in: [src/toolkit/api.ts:134](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/api.ts#L134)
+Defined in: [src/toolkit/api.ts:134](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L134)
 
 Represents a single search result item from the GitHub API.
 
 ## Properties
 
-### created\_at
+### node\_id
 
-> **created\_at**: `Date`
+> **node\_id**: `string`
 
-Defined in: [src/toolkit/api.ts:151](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/api.ts#L151)
+Defined in: [src/toolkit/api.ts:136](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L136)
 
-The date and time when the issue or pull request was created.
+The unique node ID of the search result item.
 
 ***
 
-### html\_url
+### number
 
-> **html\_url**: `string`
+> **number**: `number`
 
-Defined in: [src/toolkit/api.ts:147](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/api.ts#L147)
+Defined in: [src/toolkit/api.ts:138](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L138)
 
-The URL of the issue or pull request on GitHub.
+The issue or pull request number.
 
 ***
 
@@ -36,7 +36,7 @@ The URL of the issue or pull request on GitHub.
 
 > **labels**: `object`[]
 
-Defined in: [src/toolkit/api.ts:140](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/api.ts#L140)
+Defined in: [src/toolkit/api.ts:140](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L140)
 
 The labels associated with the issue or pull request.
 
@@ -48,23 +48,23 @@ The name of the label.
 
 ***
 
-### node\_id
+### title
 
-> **node\_id**: `string`
+> **title**: `string`
 
-Defined in: [src/toolkit/api.ts:136](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/api.ts#L136)
+Defined in: [src/toolkit/api.ts:145](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L145)
 
-The unique node ID of the search result item.
+The title of the issue or pull request.
 
 ***
 
-### number
+### html\_url
 
-> **number**: `number`
+> **html\_url**: `string`
 
-Defined in: [src/toolkit/api.ts:138](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/api.ts#L138)
+Defined in: [src/toolkit/api.ts:147](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L147)
 
-The issue or pull request number.
+The URL of the issue or pull request on GitHub.
 
 ***
 
@@ -72,16 +72,16 @@ The issue or pull request number.
 
 > **repository\_url**: `string`
 
-Defined in: [src/toolkit/api.ts:149](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/api.ts#L149)
+Defined in: [src/toolkit/api.ts:149](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L149)
 
 The URL of the repository containing the issue or pull request.
 
 ***
 
-### title
+### created\_at
 
-> **title**: `string`
+> **created\_at**: `Date`
 
-Defined in: [src/toolkit/api.ts:145](https://github.com/stairwaytowonderland/create-test/blob/418e563f4cc7e2c1fc2e1d1e5032474be00a6a48/src/toolkit/api.ts#L145)
+Defined in: [src/toolkit/api.ts:151](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L151)
 
-The title of the issue or pull request.
+The date and time when the issue or pull request was created.

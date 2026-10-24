@@ -12,7 +12,6 @@ paths-ignore:
   # Testing blocks
   - '**/__tests__/**'
   - '**/__fixtures__/**'
-  - '**/__mocks__/**'
   - '**/__utils__/**'
 
   # Documentation exclusions

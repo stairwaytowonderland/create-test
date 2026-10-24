@@ -3,8 +3,6 @@
 	"entryPointStrategy": "expand",
 	"entryPoints": ["src"],
 	"exclude": ["./src/toolkit/**"],
-	"out": "./docs",
-	"readme": "none",
 	"plugin": ["typedoc-plugin-coverage"],
 	"coverageLabel": "Action Documented",
 	"coverageColor": "#5330c8",
