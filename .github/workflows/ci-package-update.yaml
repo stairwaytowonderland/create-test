@@ -15,9 +15,9 @@ jobs:
   package-update:
     name: Update packages
     uses: stairwaytowonderland/.github/.github/workflows/ci-package-update.yaml@v1
-    # concurrency:
-    #   group: ${{ github.repository_id }}-${{ github.ref }}
-    #   cancel-in-progress: false
+    concurrency:
+      group: ${{ github.repository_id }}-${{ github.ref }}
+      cancel-in-progress: false
     permissions:
       actions: write
       contents: write
@@ -26,6 +26,15 @@ jobs:
     with:
       ignore-events: ''
     secrets: inherit
+
+  nofail:
+    name: No Fail
+    runs-on: ubuntu-latest
+    needs: [package-update]
+    if: always()
+    steps:
+      - run: |
+          echo "::notice::Skipped jobs will not fail the workflow."
 
   # debug:
   #   name: Debug
