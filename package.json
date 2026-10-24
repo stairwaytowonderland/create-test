@@ -79,7 +79,7 @@
 		"docs:toolkit": "npm run docs:clean:toolkit && npm run docs:generate:toolkit",
 		"docs:generate:action": "npx typedoc --options typedoc.action.json",
 		"docs:clean:action": "printf '\\033[1;32m%s\\033[0m\n' 'Cleaning action docs directory...' && rm -rf docs",
-		"docs:generate:toolkit": "npx typedoc --options src/toolkit/typedoc.badge.json",
+		"docs:generate:toolkit": "npx typedoc --options src/toolkit/typedoc.json",
 		"docs:clean:toolkit": "printf '\\033[1;32m%s\\033[0m\n' 'Cleaning toolkit docs directory...' && rm -rf src/toolkit/docs",
 		"all": "npm run reset && npm test && npm run bundle && npm run coverage:badge && npm run docs"
 	},
