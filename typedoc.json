@@ -8,13 +8,5 @@
 	"sort": ["kind", "instance-first", "required-first", "external-last", "alphabetical"],
 	"sortEntryPoints": true,
 	"out": "./docs",
-	"exclude": [
-		"**/__tests__/**",
-		"**/__fixtures__/**",
-		"**/__utils__/**",
-		"**/docs/**",
-		"**/*.test.ts",
-		"**/index.ts",
-		"**/main.ts"
-	]
+	"exclude": ["**/__tests__/**", "**/__fixtures__/**", "**/__utils__/**", "**/docs/**", "**/*.test.ts"]
 }

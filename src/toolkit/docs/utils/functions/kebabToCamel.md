@@ -1,14 +1,14 @@
-[**Toolkit**](../README.md)
+[**Toolkit**](../../README.md)
 
 ***
 
-[Toolkit](../README.md) / kebabToCamel
+[Toolkit](../../README.md) / [utils](../README.md) / kebabToCamel
 
 # Function: kebabToCamel()
 
 > **kebabToCamel**(`str`): `string`
 
-Defined in: [src/toolkit/utils.ts:27](https://github.com/stairwaytowonderland/create-test/blob/03c6c54377edf6b5ae38a1e0dc1199769edb57f1/src/toolkit/utils.ts#L27)
+Defined in: [src/toolkit/utils.ts:27](https://github.com/stairwaytowonderland/create-test/blob/639ad393cbaa84045d30b2212fc79f4799e4a590/src/toolkit/utils.ts#L27)
 
 Converts a kebab-case string to camelCase.
 

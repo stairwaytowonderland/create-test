@@ -4,7 +4,6 @@
  * This file contains the main entry for the GitHub Action,
  * which gathers inputs and invokes the run function.
  *
- * @module Main
  * @packageDocumentation
  */
 

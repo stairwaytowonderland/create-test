@@ -7,8 +7,8 @@
 	"pageTitleTemplates": {
 		"index": "{projectName} Reference"
 	},
-	"entryPointStrategy": "resolve",
-	"entryPoints": ["./index.ts"],
+	"entryPointStrategy": "expand",
+	"entryPoints": ["."],
 	"sort": ["kind", "instance-first", "required-first", "alphabetical"],
 	"sortEntryPoints": true,
 	"out": "./docs",

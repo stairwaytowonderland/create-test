@@ -1,14 +1,14 @@
-[**Toolkit**](../README.md)
+[**Toolkit**](../../README.md)
 
 ***
 
-[Toolkit](../README.md) / getSafeInputs
+[Toolkit](../../README.md) / [action](../README.md) / getSafeInputs
 
 # Function: getSafeInputs()
 
 > **getSafeInputs**\<`K`\>(`inputs?`, ...`keys`): `Omit`\<[`ActionInputs`](../type-aliases/ActionInputs.md), `K`\>
 
-Defined in: [src/toolkit/action.ts:69](https://github.com/stairwaytowonderland/create-test/blob/03c6c54377edf6b5ae38a1e0dc1199769edb57f1/src/toolkit/action.ts#L69)
+Defined in: [src/toolkit/action.ts:69](https://github.com/stairwaytowonderland/create-test/blob/639ad393cbaa84045d30b2212fc79f4799e4a590/src/toolkit/action.ts#L69)
 
 Filters out specified keys from the action inputs object.
 

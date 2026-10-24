@@ -1,14 +1,14 @@
-[**Toolkit**](../README.md)
+[**Toolkit**](../../README.md)
 
 ***
 
-[Toolkit](../README.md) / isOctokitAuthenticated
+[Toolkit](../../README.md) / [api](../README.md) / isOctokitAuthenticated
 
 # Function: isOctokitAuthenticated()
 
 > **isOctokitAuthenticated**(`octokit`, `action`, `failOnError?`): `Promise`\<`boolean`\>
 
-Defined in: [src/toolkit/api.ts:28](https://github.com/stairwaytowonderland/create-test/blob/03c6c54377edf6b5ae38a1e0dc1199769edb57f1/src/toolkit/api.ts#L28)
+Defined in: [src/toolkit/api.ts:28](https://github.com/stairwaytowonderland/create-test/blob/639ad393cbaa84045d30b2212fc79f4799e4a590/src/toolkit/api.ts#L28)
 
 Checks if the provided Octokit client is authenticated for the given repository action.
 
@@ -22,7 +22,7 @@ The Octokit client to check authentication for.
 
 ### action
 
-[`ActionConfig`](../interfaces/ActionConfig.md)
+[`ActionConfig`](../../action/interfaces/ActionConfig.md)
 
 The repository action containing repository and input details.
 

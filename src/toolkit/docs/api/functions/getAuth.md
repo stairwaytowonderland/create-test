@@ -1,14 +1,14 @@
-[**Toolkit**](../README.md)
+[**Toolkit**](../../README.md)
 
 ***
 
-[Toolkit](../README.md) / getAuth
+[Toolkit](../../README.md) / [api](../README.md) / getAuth
 
 # Function: getAuth()
 
 > **getAuth**(`action`, `failOnError?`, `ghToken?`): `Promise`\<`Octokit` & `Api` & `object` \| `undefined`\>
 
-Defined in: [src/toolkit/api.ts:77](https://github.com/stairwaytowonderland/create-test/blob/03c6c54377edf6b5ae38a1e0dc1199769edb57f1/src/toolkit/api.ts#L77)
+Defined in: [src/toolkit/api.ts:77](https://github.com/stairwaytowonderland/create-test/blob/639ad393cbaa84045d30b2212fc79f4799e4a590/src/toolkit/api.ts#L77)
 
 Retrieves an authenticated Octokit client using the provided GitHub token or the token from the action inputs.
 
@@ -18,7 +18,7 @@ If the environment is set to 'test', the function will skip live GitHub API auth
 
 ### action
 
-[`ActionConfig`](../interfaces/ActionConfig.md)
+[`ActionConfig`](../../action/interfaces/ActionConfig.md)
 
 The repository action containing repository and input details.
 

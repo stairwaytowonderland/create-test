@@ -1,8 +1,6 @@
 {
 	"extends": "./typedoc.json",
 	"plugin": ["typedoc-plugin-coverage", "typedoc-plugin-markdown"],
-	"sort": ["source-order"],
-	"sortEntryPoints": false,
 	"coverageLabel": "Documented",
 	"coverageColor": "#5330c8",
 	"coverageOutputPath": "./badges/documentation.svg",

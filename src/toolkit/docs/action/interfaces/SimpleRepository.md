@@ -1,12 +1,12 @@
-[**Toolkit**](../README.md)
+[**Toolkit**](../../README.md)
 
 ***
 
-[Toolkit](../README.md) / SimpleRepository
+[Toolkit](../../README.md) / [action](../README.md) / SimpleRepository
 
 # Interface: SimpleRepository
 
-Defined in: [src/toolkit/action.ts:101](https://github.com/stairwaytowonderland/create-test/blob/03c6c54377edf6b5ae38a1e0dc1199769edb57f1/src/toolkit/action.ts#L101)
+Defined in: [src/toolkit/action.ts:101](https://github.com/stairwaytowonderland/create-test/blob/639ad393cbaa84045d30b2212fc79f4799e4a590/src/toolkit/action.ts#L101)
 
 Represents basic information about a GitHub repository.
 
@@ -22,6 +22,16 @@ Extends the Partial type to allow optional repository properties.
 - `Partial`\<[`GitHubContext`](GitHubContext.md)\[`"repo"`\]\>
 
 ## Properties
+
+### fullName?
+
+> `optional` **fullName?**: `string`
+
+Defined in: [src/toolkit/action.ts:103](https://github.com/stairwaytowonderland/create-test/blob/639ad393cbaa84045d30b2212fc79f4799e4a590/src/toolkit/action.ts#L103)
+
+The full repository name in the format "owner/repo".
+
+***
 
 ### owner?
 
@@ -44,13 +54,3 @@ Defined in: node\_modules/@actions/github/lib/context.d.ts:31
 #### Inherited from
 
 `Partial.repo`
-
-***
-
-### fullName?
-
-> `optional` **fullName?**: `string`
-
-Defined in: [src/toolkit/action.ts:103](https://github.com/stairwaytowonderland/create-test/blob/03c6c54377edf6b5ae38a1e0dc1199769edb57f1/src/toolkit/action.ts#L103)
-
-The full repository name in the format "owner/repo".
