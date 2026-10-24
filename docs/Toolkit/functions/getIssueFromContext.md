@@ -2,7 +2,7 @@
 
 ***
 
-[create-test](../../README.md) / [Toolkit](../README.md) / getIssueFromContext
+[create-test](../../README.md) / [#toolkit](../README.md) / getIssueFromContext
 
 # Function: getIssueFromContext()
 

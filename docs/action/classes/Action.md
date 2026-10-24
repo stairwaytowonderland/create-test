@@ -12,8 +12,8 @@ Implements the RepoAction interface and provides methods to run the action.
 
 ## Implements
 
-- [`ActionConfig`](../../Toolkit/interfaces/ActionConfig.md)
-- [`ActionRun`](../../Toolkit/interfaces/ActionRun.md)
+- [`ActionConfig`](../../toolkit/interfaces/ActionConfig.md)
+- [`ActionRun`](../../toolkit/interfaces/ActionRun.md)
 
 ## Constructors
 
@@ -27,7 +27,7 @@ Creates a new instance of the Action class.
 
 ##### context
 
-[`GitHubContext`](../../Toolkit/interfaces/GitHubContext.md)
+[`GitHubContext`](../../toolkit/interfaces/GitHubContext.md)
 
 The GitHub context object.
 
@@ -61,19 +61,19 @@ Indicates if the action should run in dry-run mode.
 
 #### Implementation of
 
-[`ActionConfig`](../../Toolkit/interfaces/ActionConfig.md).[`dryRun`](../../Toolkit/interfaces/ActionConfig.md#dryrun)
+[`ActionConfig`](../../toolkit/interfaces/ActionConfig.md).[`dryRun`](../../toolkit/interfaces/ActionConfig.md#dryrun)
 
 ***
 
 ### context
 
-> **context**: [`GitHubContext`](../../Toolkit/interfaces/GitHubContext.md)
+> **context**: [`GitHubContext`](../../toolkit/interfaces/GitHubContext.md)
 
 The GitHub context object.
 
 #### Implementation of
 
-[`ActionConfig`](../../Toolkit/interfaces/ActionConfig.md).[`context`](../../Toolkit/interfaces/ActionConfig.md#context)
+[`ActionConfig`](../../toolkit/interfaces/ActionConfig.md).[`context`](../../toolkit/interfaces/ActionConfig.md#context)
 
 ***
 
@@ -97,7 +97,7 @@ Indicates if the action should run in dry-run mode.
 
 #### Implementation of
 
-[`ActionConfig`](../../Toolkit/interfaces/ActionConfig.md).[`inputs`](../../Toolkit/interfaces/ActionConfig.md#inputs)
+[`ActionConfig`](../../toolkit/interfaces/ActionConfig.md).[`inputs`](../../toolkit/interfaces/ActionConfig.md#inputs)
 
 ## Accessors
 
@@ -119,19 +119,19 @@ Returns the actor (user) who triggered the GitHub Action.
 
 #### Get Signature
 
-> **get** **repo**(): [`SimpleRepository`](../../Toolkit/interfaces/SimpleRepository.md)
+> **get** **repo**(): [`SimpleRepository`](../../toolkit/interfaces/SimpleRepository.md)
 
 Returns the repository associated with the GitHub Action.
 
 ##### Returns
 
-[`SimpleRepository`](../../Toolkit/interfaces/SimpleRepository.md)
+[`SimpleRepository`](../../toolkit/interfaces/SimpleRepository.md)
 
 The repository associated with the GitHub Action.
 
 #### Implementation of
 
-[`ActionConfig`](../../Toolkit/interfaces/ActionConfig.md).[`repo`](../../Toolkit/interfaces/ActionConfig.md#repo)
+[`ActionConfig`](../../toolkit/interfaces/ActionConfig.md).[`repo`](../../toolkit/interfaces/ActionConfig.md#repo)
 
 ## Methods
 
@@ -149,4 +149,4 @@ A promise that resolves when the action has completed its run.
 
 #### Implementation of
 
-[`ActionRun`](../../Toolkit/interfaces/ActionRun.md).[`run`](../../Toolkit/interfaces/ActionRun.md#run)
+[`ActionRun`](../../toolkit/interfaces/ActionRun.md).[`run`](../../toolkit/interfaces/ActionRun.md#run)

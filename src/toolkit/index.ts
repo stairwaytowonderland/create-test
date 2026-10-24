@@ -1,7 +1,7 @@
 /**
  * Exports all the modules from the toolkit.
  *
- * @module Toolkit
+ * @module #toolkit
  * @packageDocumentation
  */
 

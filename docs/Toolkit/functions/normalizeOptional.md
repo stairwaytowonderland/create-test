@@ -2,7 +2,7 @@
 
 ***
 
-[create-test](../../README.md) / [Toolkit](../README.md) / normalizeOptional
+[create-test](../../README.md) / [#toolkit](../README.md) / normalizeOptional
 
 # Function: normalizeOptional()
 

@@ -2,7 +2,7 @@
 
 ***
 
-[create-test](../../README.md) / [Toolkit](../README.md) / isOctokitAuthenticated
+[create-test](../../README.md) / [#toolkit](../README.md) / isOctokitAuthenticated
 
 # Function: isOctokitAuthenticated()
 

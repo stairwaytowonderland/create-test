@@ -2,7 +2,7 @@
 
 ***
 
-[create-test](../../README.md) / [Toolkit](../README.md) / searchIssuesAndPullRequests
+[create-test](../../README.md) / [#toolkit](../README.md) / searchIssuesAndPullRequests
 
 # Function: searchIssuesAndPullRequests()
 

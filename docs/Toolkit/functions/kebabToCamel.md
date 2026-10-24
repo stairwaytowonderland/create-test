@@ -2,7 +2,7 @@
 
 ***
 
-[create-test](../../README.md) / [Toolkit](../README.md) / kebabToCamel
+[create-test](../../README.md) / [#toolkit](../README.md) / kebabToCamel
 
 # Function: kebabToCamel()
 

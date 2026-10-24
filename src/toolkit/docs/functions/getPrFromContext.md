@@ -8,7 +8,7 @@
 
 > **getPrFromContext**(`context?`): \{\[`key`: `string`\]: `any`; `number`: `number`; `html_url?`: `string`; `body?`: `string`; \} \| `undefined`
 
-Defined in: [src/toolkit/api.ts:124](https://github.com/stairwaytowonderland/create-test/blob/7cdfbf1177dd2460d46901c864bdbb43ebd9b4c7/src/toolkit/api.ts#L124)
+Defined in: [src/toolkit/api.ts:124](https://github.com/stairwaytowonderland/create-test/blob/03c6c54377edf6b5ae38a1e0dc1199769edb57f1/src/toolkit/api.ts#L124)
 
 Get the pull request object from the GitHub context payload.
 

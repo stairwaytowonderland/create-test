@@ -2,7 +2,7 @@
 
 ***
 
-[create-test](../../README.md) / [Toolkit](../README.md) / getAuth
+[create-test](../../README.md) / [#toolkit](../README.md) / getAuth
 
 # Function: getAuth()
 

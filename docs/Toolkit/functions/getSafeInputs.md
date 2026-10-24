@@ -2,7 +2,7 @@
 
 ***
 
-[create-test](../../README.md) / [Toolkit](../README.md) / getSafeInputs
+[create-test](../../README.md) / [#toolkit](../README.md) / getSafeInputs
 
 # Function: getSafeInputs()
 
