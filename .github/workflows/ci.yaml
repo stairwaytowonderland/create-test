@@ -46,8 +46,18 @@ defaults:
 
 # 5. Job Execution
 jobs:
+  info:
+    name: 🪏 Gather Info
+    permissions:
+      contents: read
+    uses: stairwaytowonderland/.github/.github/workflows/ci-meta.yaml@v1
+    with:
+      publish: ${{ (github.event_name == 'workflow_dispatch' && (inputs.tag != '' && inputs.notes-b64 != '')) || startsWith(github.ref, 'refs/tags/') }}
+
   changed:
     name: 📁 Check Changed Files
+    needs: [info]
+    if: needs.info.outputs.is-release-workflow == 'true'
     uses: stairwaytowonderland/.github/.github/workflows/check-changed.yaml@v1
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -62,19 +72,9 @@ jobs:
         !**/src/**/badges/*
         !**/src/**/docs/**/*
 
-  info:
-    name: 🪏 Gather Info
-    needs: [changed]
-    if: needs.changed.outputs.result == 'true'
-    permissions:
-      contents: read
-    uses: stairwaytowonderland/.github/.github/workflows/ci-meta.yaml@v1
-    with:
-      publish: ${{ (github.event_name == 'workflow_dispatch' && (inputs.tag != '' && inputs.notes-b64 != '')) || startsWith(github.ref, 'refs/tags/') }}
-
   test:
     name: 🔔 Run Action Tests
-    needs: [changed, info]
+    needs: [info, changed]
     if: needs.changed.outputs.result == 'true' && needs.info.outputs.is-release-workflow == 'true'
     permissions:
       contents: read
@@ -84,14 +84,14 @@ jobs:
 
   check-dist:
     name: 🏗️ Check Transpiled JavaScript
-    needs: [changed, info]
+    needs: [info, changed]
     if: needs.changed.outputs.result == 'true' && needs.info.outputs.is-release-workflow == 'true'
     uses: ./.github/workflows/check-dist.yaml
 
   release:
     name: 🚀 Release a New Version
-    needs: [changed, info, test, check-dist]
-    if: always() && needs.info.outputs.is-release-workflow == 'true'
+    needs: [info, changed, test, check-dist]
+    if: (needs.info.outputs.is-release-workflow == 'true' && needs.changed.outputs.result != 'true') && always() || success()
     uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
     permissions:
       actions: write
