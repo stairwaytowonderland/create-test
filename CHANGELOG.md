@@ -1,3 +1,14 @@
+## [1.87.0](https://github.com/stairwaytowonderland/create-test/compare/v1.86.0...v1.87.0) (2026-10-24)
+
+### ✨ Features
+
+* updates ([03c6c54](https://github.com/stairwaytowonderland/create-test/commit/03c6c54377edf6b5ae38a1e0dc1199769edb57f1))
+
+### 🔧 Chores
+
+* typedoc update ([fb63396](https://github.com/stairwaytowonderland/create-test/commit/fb63396080189f9e6605350f9badf7797ea0d5e7))
+* typedoc update ([17dafc6](https://github.com/stairwaytowonderland/create-test/commit/17dafc6578c745c8ca70d236f34cd8f23a26f747))
+
 ## [1.86.0](https://github.com/stairwaytowonderland/create-test/compare/v1.85.0...v1.86.0) (2026-10-24)
 
 ### ✨ Features
