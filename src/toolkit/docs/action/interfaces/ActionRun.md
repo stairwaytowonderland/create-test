@@ -6,7 +6,7 @@
 
 # Interface: ActionRun
 
-Defined in: [src/toolkit/action.ts:16](https://github.com/stairwaytowonderland/create-test/blob/639ad393cbaa84045d30b2212fc79f4799e4a590/src/toolkit/action.ts#L16)
+Defined in: [src/toolkit/action.ts:16](https://github.com/stairwaytowonderland/create-test/blob/bd3028f5120794b669852e2dadfe8b10434777d3/src/toolkit/action.ts#L16)
 
 Represents the configuration for a GitHub Action that includes a `run` method.
 
@@ -16,7 +16,7 @@ Represents the configuration for a GitHub Action that includes a `run` method.
 
 > **run**(): `Promise`\<`unknown`\>
 
-Defined in: [src/toolkit/action.ts:23](https://github.com/stairwaytowonderland/create-test/blob/639ad393cbaa84045d30b2212fc79f4799e4a590/src/toolkit/action.ts#L23)
+Defined in: [src/toolkit/action.ts:23](https://github.com/stairwaytowonderland/create-test/blob/bd3028f5120794b669852e2dadfe8b10434777d3/src/toolkit/action.ts#L23)
 
 Executes the main logic of the GitHub Action.
 
