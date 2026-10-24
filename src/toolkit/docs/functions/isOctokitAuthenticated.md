@@ -8,7 +8,7 @@
 
 > **isOctokitAuthenticated**(`octokit`, `action`, `failOnError?`): `Promise`\<`boolean`\>
 
-Defined in: [src/toolkit/api.ts:28](https://github.com/stairwaytowonderland/create-test/blob/d4592b566e8eb5b8934094c52863cb3280562329/src/toolkit/api.ts#L28)
+Defined in: [src/toolkit/api.ts:28](https://github.com/stairwaytowonderland/create-test/blob/675ac40dbb8fedcb031c5fd85b4bba9372bc215d/src/toolkit/api.ts#L28)
 
 Checks if the provided Octokit client is authenticated for the given repository action.
 
