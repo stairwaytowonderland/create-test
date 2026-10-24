@@ -90,8 +90,8 @@ jobs:
 
   release:
     name: 🚀 Release a New Version
-    needs: [info, test, check-dist]
-    if: (always() && needs.info.outputs.is-release-workflow == 'true' && needs.test.outputs.completed != 'true' && needs.check-dist.outputs.completed != 'true')
+    needs: [changed, info, test, check-dist]
+    if: (needs.changed.outputs.result == 'true' && success()) || (always() && needs.test.outputs.completed != 'true' && needs.check-dist.outputs.completed != 'true' && needs.info.outputs.is-release-workflow == 'true')
     uses: stairwaytowonderland/.github/.github/workflows/release.yaml@v1
     permissions:
       actions: write
